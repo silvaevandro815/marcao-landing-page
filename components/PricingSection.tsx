@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useUTM } from "@/hooks/useUTM";
 
 const WA_LINK = "https://wa.me/5532984138183?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA.";
 
@@ -29,6 +30,7 @@ const FAQS = [
 export default function PricingSection() {
   const titleRef = useRef<HTMLDivElement>(null);
   const inView = useInView(titleRef, { once: true });
+  const { getWhatsAppCTA } = useUTM();
 
   return (
     <section id="planos" className="relative py-24 lg:py-36 overflow-hidden">
@@ -125,7 +127,7 @@ export default function PricingSection() {
 
               {/* CTA */}
               <a
-                href={WA_LINK}
+                href={getWhatsAppCTA("Oi Marcão! Quero assinar o plano e aceitar meu desafio. Onde pago os 49,90?")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-shimmer group flex items-center justify-center gap-2.5 py-4 rounded-2xl bg-brand-lime text-black font-black text-base hover:shadow-lime-glow transition-all duration-300 hover:scale-105 active:scale-95 animate-glow-pulse"

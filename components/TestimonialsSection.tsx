@@ -139,19 +139,23 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Marquee Row 1 */}
-      <div className="marquee-wrapper mb-4">
-        <div className="marquee-track">
+      <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-6 px-4 md:px-0 md:marquee-wrapper md:overflow-hidden md:pl-0 mb-4 items-center gap-4 md:gap-0">
+        <div className="flex flex-nowrap md:marquee-track">
           {[...TESTIMONIALS_ROW1, ...TESTIMONIALS_ROW1].map((t, i) => (
-            <TestimonialCard key={`r1-${i}`} t={t} />
+            <div key={`r1-${i}`} className="snap-center shrink-0">
+              <TestimonialCard t={t} />
+            </div>
           ))}
         </div>
       </div>
 
       {/* Marquee Row 2 (reverse) */}
-      <div className="marquee-wrapper">
-        <div className="marquee-track-reverse">
+      <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-6 px-4 md:px-0 md:marquee-wrapper md:overflow-hidden md:pl-0 items-center gap-4 md:gap-0">
+        <div className="flex flex-nowrap md:marquee-track-reverse">
           {[...TESTIMONIALS_ROW2, ...TESTIMONIALS_ROW2].map((t, i) => (
-            <TestimonialCard key={`r2-${i}`} t={t} />
+            <div key={`r2-${i}`} className="snap-center shrink-0">
+              <TestimonialCard t={t} />
+            </div>
           ))}
         </div>
       </div>

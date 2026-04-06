@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import LogoSVG from "@/components/LogoSVG";
+import { useUTM } from "@/hooks/useUTM";
 
 const WA_LINK = "https://wa.me/5532984138183?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA.";
 
@@ -14,6 +15,8 @@ const FOOTER_LINKS = [
 ];
 
 export default function Footer() {
+  const { getWhatsAppCTA } = useUTM();
+
   return (
     <footer className="relative border-t border-surface-border overflow-hidden">
       {/* Aurora glow */}
@@ -44,7 +47,7 @@ export default function Footer() {
           </p>
 
           <a
-            href={WA_LINK}
+            href={getWhatsAppCTA("Oi Marcão! Quero conhecer o coaching com IA.")}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-shimmer group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-lime text-black font-black text-lg hover:shadow-lime-glow transition-all duration-300 hover:scale-105 active:scale-95 animate-glow-pulse"

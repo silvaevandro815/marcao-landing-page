@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useUTM } from "@/hooks/useUTM";
 
 const WA_LINK = "https://wa.me/5532984138183?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA.";
 
@@ -30,6 +31,7 @@ function StatBadge({ value, label, color }: { value: string; label: string; colo
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [chatIndex, setChatIndex] = useState(0);
+  const { getWhatsAppCTA } = useUTM();
 
   // Scroll-based parallax
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
@@ -140,7 +142,7 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-3"
             >
               <a
-                href={WA_LINK}
+                href={getWhatsAppCTA("Oi Marcão! Quero conhecer o coaching com IA.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-shimmer group relative inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-brand-lime text-black font-bold text-base hover:shadow-lime-glow transition-all duration-300 hover:scale-105 active:scale-95"

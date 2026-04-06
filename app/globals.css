@@ -152,3 +152,14 @@ body {
   max-width: 85%;
   align-self: flex-end;
 }
+
+/* ── Hide Scrollbar Utilitário ── */
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE e Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Opera */
+  }
+}
