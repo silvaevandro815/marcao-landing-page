@@ -36,7 +36,9 @@ export default function HeroSection() {
   // Scroll-based parallax
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  // Diminui o opacity transform apenas para um fade sutil (1 -> 0.7) ou 1->0.3 no hero art
+  // De forma que o bloco esquerdo dos textoe snão suma até cruzar o viewport inteiro.
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.3]);
   const ySpring = useSpring(y, { stiffness: 80, damping: 20 });
 
   // Animate chat messages
@@ -171,10 +173,15 @@ export default function HeroSection() {
               className="flex items-center gap-3 pt-2"
             >
               <div className="flex -space-x-2">
-                {["A","C","J","M","R"].map((l, i) => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-surface-black flex items-center justify-center text-xs font-bold"
-                    style={{ background: `hsl(${(i * 36 + 90) % 360}, 70%, 35%)` }}>
-                    {l}
+                {[
+                  "https://randomuser.me/api/portraits/men/32.jpg",
+                  "https://randomuser.me/api/portraits/women/44.jpg",
+                  "https://randomuser.me/api/portraits/men/46.jpg",
+                  "https://randomuser.me/api/portraits/women/68.jpg",
+                  "https://randomuser.me/api/portraits/men/62.jpg",
+                ].map((avatar, i) => (
+                  <div key={i} className="w-8 h-8 rounded-full border-2 border-surface-black flex items-center justify-center bg-surface-dark overflow-hidden">
+                    <img src={avatar} alt="User avatar" className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
