@@ -36,9 +36,7 @@ export default function HeroSection() {
   // Scroll-based parallax
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  // Diminui o opacity transform apenas para um fade sutil (1 -> 0.7) ou 1->0.3 no hero art
-  // De forma que o bloco esquerdo dos textoe snão suma até cruzar o viewport inteiro.
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.3]);
+  // Removemos o opacity transform no hero slider, mantendo tudo 100% visível enquanto o usuário rola
   const ySpring = useSpring(y, { stiffness: 80, damping: 20 });
 
   // Animate chat messages
@@ -87,7 +85,7 @@ export default function HeroSection() {
       </div>
 
       <motion.div
-        style={{ y: ySpring, opacity }}
+        style={{ y: ySpring }}
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 w-full"
       >
         <div className="grid lg:grid-cols-2 gap-16 items-center">
