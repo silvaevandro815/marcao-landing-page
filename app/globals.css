@@ -1,0 +1,154 @@
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --lime: #39FF14;
+  --orange: #FF6B00;
+  --navy: #0A1628;
+  --cyan: #00E5FF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #000000;
+  color: #FFFFFF;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #39FF14; border-radius: 2px; }
+
+/* ── Selection ── */
+::selection { background: rgba(57,255,20,0.3); color: #fff; }
+
+/* ── Shimmer Button ── */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-20deg);
+  animation: shimmer-btn 2.5s infinite;
+}
+@keyframes shimmer-btn {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* ── Grid Background ── */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(57,255,20,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57,255,20,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Glow text ── */
+.text-glow-lime {
+  text-shadow: 0 0 20px rgba(57,255,20,0.6), 0 0 60px rgba(57,255,20,0.3);
+}
+.text-glow-orange {
+  text-shadow: 0 0 20px rgba(255,107,0,0.6), 0 0 60px rgba(255,107,0,0.3);
+}
+
+/* ── Aurora Background ── */
+.aurora-bg {
+  position: relative;
+  isolation: isolate;
+}
+.aurora-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 15% -10%, rgba(57,255,20,0.12) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 85% 105%, rgba(255,107,0,0.1) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0,229,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+  animation: aurora-pulse 12s ease-in-out infinite;
+}
+
+/* ── Card glass ── */
+.glass-card {
+  background: rgba(13, 20, 34, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(57,255,20,0.1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 40px rgba(0,0,0,0.4);
+}
+
+/* ── Gradient text ── */
+.gradient-text-lime {
+  background: linear-gradient(135deg, #39FF14 0%, #00E5FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-orange {
+  background: linear-gradient(135deg, #FF6B00 0%, #FFB800 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Marquee ── */
+.marquee-wrapper {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
+}
+.marquee-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.marquee-track-reverse {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marquee-reverse 30s linear infinite;
+}
+
+/* ── WhatsApp mockup ── */
+.whatsapp-bubble-in {
+  background: #1a2535;
+  border-radius: 16px 16px 16px 4px;
+  padding: 10px 14px;
+  max-width: 85%;
+  align-self: flex-start;
+}
+.whatsapp-bubble-out {
+  background: #1a3a28;
+  border-radius: 16px 16px 4px 16px;
+  padding: 10px 14px;
+  max-width: 85%;
+  align-self: flex-end;
+}
