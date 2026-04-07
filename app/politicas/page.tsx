@@ -31,6 +31,18 @@ const SECTIONS = [
         subtitle: "Compartilhamento com terceiros",
         text: "Utilizamos os seguintes processadores de dados: OpenAI (processamento de linguagem natural e visão computacional), Stripe (processamento de pagamentos, sujeito à política de privacidade da Stripe), Meta/WhatsApp Business API (canal de comunicação). Nenhum dado é comercializado.",
       },
+      {
+        subtitle: "Conformidade com a Política de Dados do Google (Limited Use)",
+        text: (
+          <>
+            O uso e a transferência para qualquer outro aplicativo das informações recebidas das APIs do Google aderem à{" "}
+            <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" className="text-brand-lime hover:underline">
+              Política de Dados do Usuário dos Serviços de API do Google
+            </a>
+            , incluindo os requisitos de Uso Limitado (Limited Use). Os dados de saúde do Google Fit são consumidos exclusivamente para personalizar os treinos e feedbacks gerados pela Inteligência Artificial e jamais serão utilizados para servir anúncios ou vendidos para corretores de dados.
+          </>
+        ),
+      },
     ],
   },
   {
