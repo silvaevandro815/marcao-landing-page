@@ -108,8 +108,8 @@ type GLTFResult = GLTF & {
   animations: THREE.AnimationClip[]
 }
 
-export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/apple_watch_ultra_2.glb') as GLTFResult
+export function Model(props: React.JSX.IntrinsicElements['group']) {
+  const { nodes, materials } = useGLTF('/apple_watch_ultra_2.glb') as unknown as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
