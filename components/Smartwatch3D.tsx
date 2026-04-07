@@ -15,56 +15,41 @@ import * as THREE from "three";
 function WatchModel() {
   return (
     <group>
-      {/* Pulseira (Wristband/Strap) - Torus based for realistic thickness */}
-      {/* rotation y=Math.PI/2 makes the hole face the left/right, wrapping around the arm */}
-      <mesh position={[0, 0, -0.45]} rotation={[0, Math.PI / 2, 0]} scale={[1.5, 1.2, 0.9]}>
-        <torusGeometry args={[1.3, 0.35, 64, 64]} />
+      {/* Pulseira (Wristband/Strap) - Silicone smartband style seamlessly connecting to the housing */}
+      <mesh position={[0, 0, -0.9]} rotation={[0, Math.PI / 2, 0]} scale={[7.2, 1, 0.8]}>
+        <torusGeometry args={[1.15, 0.08, 64, 128]} />
         <meshPhysicalMaterial 
-          color="#111116" 
-          roughness={0.8} 
-          metalness={0.1} 
+          color="#0f0f0f" 
+          roughness={0.9} 
+          metalness={0.0} 
+          clearcoat={0.05}
+        />
+      </mesh>
+
+      {/* Main Body Housing (Mi Band style core) */}
+      <RoundedBox args={[1.18, 2.3, 0.4]} radius={0.2} smoothness={16} position={[0, 0, -0.05]}>
+        <meshPhysicalMaterial
+          color="#111111"
+          roughness={0.7}
+          metalness={0.2}
           clearcoat={0.1}
         />
-      </mesh>
-
-      {/* Caixa do Relógio exterior (Housing de borracha) */}
-      <mesh position={[0, 0, -0.1]} scale={[1, 1, 0.6]}>
-        <capsuleGeometry args={[0.8, 1.8, 32, 64]} />
-        <meshPhysicalMaterial
-          color="#16161a"
-          roughness={0.7}
-          metalness={0.3}
-          clearcoat={0.2}
-        />
-      </mesh>
-
-      {/* Moldura Metálica (Bezel) */}
-      <mesh position={[0, 0, -0.02]} scale={[1, 1, 0.6]}>
-        <capsuleGeometry args={[0.76, 1.76, 32, 64]} />
-        <meshPhysicalMaterial
-          color="#333333"
-          metalness={0.8}
-          roughness={0.3}
-          envMapIntensity={2}
-          clearcoat={0.4}
-        />
-      </mesh>
+      </RoundedBox>
 
       {/* Tela de Vidro (Screen Glass) */}
-      <mesh position={[0, 0, 0.02]} scale={[1, 1, 0.6]}>
-        <capsuleGeometry args={[0.72, 1.7, 32, 64]} />
+      <RoundedBox args={[1.1, 2.2, 0.1]} radius={0.15} smoothness={16} position={[0, 0, 0.15]}>
         <meshPhysicalMaterial
-          color="#060606"
+          color="#000000"
           metalness={0.4}
           roughness={0.05}
           transmission={0}
           envMapIntensity={2.5}
           clearcoat={0.8}
         />
-      </mesh>
+      </RoundedBox>
 
       {/* Digital UI Display projetada 3D */}
-      <Html transform position={[0, 0, 0.46]} rotation={[0, 0, 0]} distanceFactor={3.2}>
+      <Html transform position={[0, 0, 0.22]} rotation={[0, 0, 0]} distanceFactor={3.2}>
         <div 
           className="flex flex-col justify-between p-3 font-sans overflow-hidden pointer-events-none select-none relative" 
           style={{ 
