@@ -22,75 +22,7 @@ function WatchModel() {
       {/* 3D Model of Apple Watch */}
       <primitive object={scene} scale={26} position={[0.0, -0.5, -0.2]} rotation={[0.0, -0.1, 0.0]} />
 
-      {/* Digital UI Display projetada 3D */}
-      <Html transform position={[0, -0.1, 0.2]} rotation={[0, -0.1, 0]} distanceFactor={1.3}>
-        <div 
-          className="flex flex-col justify-between p-3 font-sans overflow-hidden pointer-events-none select-none relative" 
-          style={{ 
-            width: '135px', 
-            height: '290px', 
-            background: '#030508', 
-            borderRadius: '45px',
-            boxShadow: 'inset 0 0 20px rgba(57,255,20,0.05)',
-            border: '2px solid rgba(255,255,255,0.03)'
-          }}
-        >
-           {/* Top bar */}
-           <div className="flex justify-between items-center text-white/60 text-[10px] px-2 font-mono tracking-wider mt-1">
-              <span>10:42</span>
-              <div className="flex items-center gap-1.5">
-                <span>100%</span>
-                <div className="w-3.5 h-1.5 bg-brand-lime rounded-sm shadow-[0_0_8px_rgba(57,255,20,0.5)]" />
-              </div>
-           </div>
-           
-           {/* Center Stats */}
-           <div className="flex flex-col items-center gap-2 mt-2 mb-auto z-10">
-              <div className="px-2.5 py-0.5 rounded-full bg-brand-lime/10 border border-brand-lime/30 shadow-[0_0_10px_rgba(57,255,20,0.2)]">
-                <span className="text-[8px] text-brand-lime font-bold tracking-widest uppercase">Marcão Sync</span>
-              </div>
-              
-              <div className="flex items-baseline gap-1 font-black mt-3">
-                 <span className="text-[#FF3B30] text-3xl animate-pulse drop-shadow-[0_0_10px_rgba(255,59,48,0.5)]">♥</span>
-                 <span className="text-white text-5xl tabular-nums tracking-tighter">126</span>
-              </div>
-              <span className="text-[#FF3B30] text-[9px] font-mono uppercase tracking-widest -mt-2 opacity-90">BPM Atual</span>
-              
-              <div className="h-px w-14 bg-gradient-to-r from-transparent via-white/20 to-transparent my-2" />
-              
-              <div className="flex justify-between items-center w-full px-2 mt-1">
-                 <div className="flex flex-col items-center bg-white/5 p-2 rounded-xl flex-1 mx-1 border border-white/5">
-                    <span className="text-brand-orange text-lg drop-shadow-[0_0_5px_rgba(255,149,0,0.5)]">🔥</span>
-                    <span className="text-white font-mono text-sm leading-none mt-1">450</span>
-                    <span className="text-white/40 text-[7px] uppercase mt-0.5">Kcal</span>
-                 </div>
-                 <div className="flex flex-col items-center bg-white/5 p-2 rounded-xl flex-1 mx-1 border border-white/5">
-                    <span className="text-brand-cyan text-lg drop-shadow-[0_0_5px_rgba(4,217,255,0.5)]">👟</span>
-                    <span className="text-white font-mono text-sm leading-none mt-1">8.4k</span>
-                    <span className="text-white/40 text-[7px] uppercase mt-0.5">Passos</span>
-                 </div>
-              </div>
-           </div>
-
-           {/* Bottom Pill */}
-           <div className="w-full py-2.5 mb-1 text-center bg-[#FF3B30]/15 rounded-full border border-[#FF3B30]/40 shadow-[0_0_15px_rgba(255,59,48,0.25)] relative overflow-hidden">
-             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] animate-[shimmer_2s_infinite]" />
-             <span className="text-[9px] uppercase font-black text-[#FF3B30] tracking-wider relative z-10">Zona de Choque</span>
-           </div>
-        </div>
-      </Html>
-
-      {/* Sensor cardíaco na parte traseira (Pulse Sensor Glow) */}
-      <mesh position={[0, 0, -0.65]}>
-        <capsuleGeometry args={[0.2, 0.4, 16, 16]} />
-        <meshBasicMaterial color="#39FF14" transparent opacity={0.8} />
-      </mesh>
-
-      {/* Decorative Glow completely behind the watch so it pops from dark bg */}
-      <mesh position={[0, 0, -1.2]}>
-        <sphereGeometry args={[2, 32, 32]} />
-        <meshBasicMaterial color="#39FF14" transparent opacity={0.03} />
-      </mesh>
+{/* Elementos HTML antigos de interface flutuante foram removidos a pedido do usuário */}
 
       {/* Tooltip 1: Treino Fofo (Top Right) */}
       <Html position={[1.4, 1.6, 0.2]} center className="pointer-events-none">
