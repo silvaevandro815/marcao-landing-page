@@ -92,7 +92,7 @@ function StarRating({ n }: { n: number }) {
 
 function TestimonialCard({ t }: { t: typeof TESTIMONIALS_ROW1[0] }) {
   return (
-    <div className="glass-card rounded-2xl p-5 flex flex-col gap-3 w-72 flex-shrink-0 mx-2 border border-surface-border hover:border-brand-lime/20 transition-colors duration-300">
+    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] p-6 flex flex-col gap-3 w-80 flex-shrink-0 mx-2 hover:bg-white/10 transition-colors duration-300">
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-surface-dark border border-surface-border/50">
           <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
@@ -112,9 +112,10 @@ function TestimonialCard({ t }: { t: typeof TESTIMONIALS_ROW1[0] }) {
 
 export default function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="relative py-24 lg:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-brand-lime/30 to-transparent" />
+    <section id="depoimentos" className="relative py-24 lg:py-32 overflow-hidden bg-transparent">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none z-0" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-brand-lime/30 to-transparent z-10" />
 
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
@@ -161,7 +162,7 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Bottom gradient mask */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-surface-black to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0A1628] to-transparent pointer-events-none z-10" />
     </section>
   );
 }

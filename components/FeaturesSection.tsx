@@ -2,10 +2,11 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { Brain, ScanEye, Target, Sunrise, HeartPulse, Trophy, CalendarDays, MapPin } from "lucide-react";
 
 const FEATURES = [
   {
-    icon: "🧠",
+    icon: <Brain className="w-6 h-6" />,
     color: "lime",
     badge: "Anti-Alucinação",
     title: "Treino Blindado Contra Falhas",
@@ -14,7 +15,7 @@ const FEATURES = [
     bullets: ["Dados verificados antes de cada mensagem", "Nunca elogia quando você não treinou", "Histórico completo vira contexto real"],
   },
   {
-    icon: "📸",
+    icon: <ScanEye className="w-6 h-6" />,
     color: "orange",
     badge: "Vision AI",
     title: "Análise Visual do Seu Progresso",
@@ -23,7 +24,7 @@ const FEATURES = [
     bullets: ["Análise quinzenal de fotos frente/costas", "Feedback de postura em exercícios", "Comparação evolutiva visual"],
   },
   {
-    icon: "🎯",
+    icon: <Target className="w-6 h-6" />,
     color: "cyan",
     badge: "35 Calibrações",
     title: "Desafios que Fazem Sentido pra Você",
@@ -32,7 +33,7 @@ const FEATURES = [
     bullets: ["7 esportes × 5 níveis = 35 combinações", "Metas em km, sessões, passos ou PRs", "Evolui conforme seu streak cresce"],
   },
   {
-    icon: "🌅",
+    icon: <Sunrise className="w-6 h-6" />,
     color: "lime",
     badge: "Morning Check",
     title: "Coaching às 7h — Todo Dia. Sem Falta.",
@@ -41,7 +42,7 @@ const FEATURES = [
     bullets: ["Relatório diário com dados do mês", "Cobra como treinador, não como bot", "Sabe quando é dia de descanso programado"],
   },
   {
-    icon: "❤️",
+    icon: <HeartPulse className="w-6 h-6" />,
     color: "orange",
     badge: "Saúde Contextual",
     title: "Ele Sabe Quando Você Está Mal",
@@ -50,7 +51,7 @@ const FEATURES = [
     bullets: ["Estados: doente, lesionado, ciclo menstrual", "Previsão de recuperação automática", "Retoma o desafio com você quando melhorar"],
   },
   {
-    icon: "🏆",
+    icon: <Trophy className="w-6 h-6" />,
     color: "cyan",
     badge: "Desafio Mensal",
     title: "Meta do Mês que Disperta Adrenalina",
@@ -59,7 +60,7 @@ const FEATURES = [
     bullets: ["LLM gera o desafio com texto motivacional", "Aceitar/Recusar via WhatsApp", "Nudges de progresso durante o mês"],
   },
   {
-    icon: "📅",
+    icon: <CalendarDays className="w-6 h-6" />,
     color: "lime",
     badge: "Programação Inteligente",
     title: "Agenda de Treino Que Não Te Abandona",
@@ -68,7 +69,7 @@ const FEATURES = [
     bullets: ["Programação A/B/C configurável", "Dias de descanso respeitados", "Sugestão de ajuste de volume mensal"],
   },
   {
-    icon: "🎪",
+    icon: <MapPin className="w-6 h-6" />,
     color: "orange",
     badge: "Eventos & Comunidade",
     title: "Encontra Eventos do Seu Esporte na Sua Cidade",
@@ -82,19 +83,19 @@ const colorMap: Record<string, { border: string; badge: string; icon: string; gl
   lime: {
     border: "border-brand-lime/20 hover:border-brand-lime/50",
     badge: "text-brand-lime bg-brand-lime/10 border-brand-lime/20",
-    icon: "bg-brand-lime/10",
+    icon: "bg-brand-lime/10 text-brand-lime",
     glow: "hover:shadow-lime-glow",
   },
   orange: {
     border: "border-brand-orange/20 hover:border-brand-orange/50",
     badge: "text-brand-orange bg-brand-orange/10 border-brand-orange/20",
-    icon: "bg-brand-orange/10",
+    icon: "bg-brand-orange/10 text-brand-orange",
     glow: "hover:shadow-orange-glow",
   },
   cyan: {
     border: "border-brand-cyan/20 hover:border-brand-cyan/50",
     badge: "text-brand-cyan bg-brand-cyan/10 border-brand-cyan/20",
-    icon: "bg-brand-cyan/10",
+    icon: "bg-brand-cyan/10 text-brand-cyan",
     glow: "hover:shadow-cyan-glow",
   },
 };
@@ -110,7 +111,9 @@ function FeatureCard({ feature, index }: { feature: typeof FEATURES[0]; index: n
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
-      className={`glass-card rounded-2xl p-6 flex flex-col gap-4 border transition-all duration-300 cursor-default ${c.border} ${c.glow}`}
+      className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 lg:p-8 flex flex-col gap-4 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-all duration-300 cursor-default hover:bg-white/10 ${c.border} ${c.glow} ${
+        index === 0 || index === 5 || index === 7 ? "md:col-span-2" : "col-span-1"
+      }`}
     >
       {/* Icon + Badge */}
       <div className="flex items-center justify-between">
@@ -150,9 +153,11 @@ export default function FeaturesSection() {
   const titleInView = useInView(titleRef, { once: true });
 
   return (
-    <section id="funcionalidades" className="relative py-24 lg:py-36 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-grid opacity-50 pointer-events-none" />
+    <section id="funcionalidades" className="relative py-24 lg:py-36 overflow-hidden bg-transparent">
+      {/* Background Glows */}
+      <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#00E5FF]/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none z-0" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-brand-lime/30" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,8 +197,8 @@ export default function FeaturesSection() {
           </motion.p>
         </div>
 
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
           {FEATURES.map((f, i) => (
             <FeatureCard key={i} feature={f} index={i} />
           ))}

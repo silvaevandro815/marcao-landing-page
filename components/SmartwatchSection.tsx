@@ -50,10 +50,10 @@ export default function SmartwatchSection() {
         style={{ y: bgY }}
         className="absolute inset-0 pointer-events-none"
       >
-        <div className="absolute inset-0 bg-surface-dark" />
+        <div className="absolute inset-0 bg-transparent" />
         <div className="absolute inset-0 bg-grid opacity-20" />
         {/* Radial glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-brand-lime/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
       </motion.div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,14 +124,14 @@ export default function SmartwatchSection() {
         </div>
 
         {/* Categories Grid - Swipeable on mobile */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pt-6 pb-8 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {/* Categoria 1: Verde */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="snap-center shrink-0 w-[85%] md:w-auto relative glass-card rounded-3xl p-8 flex flex-col gap-6 border border-brand-lime/40 ring-1 ring-brand-lime/20 bg-brand-lime/5 transition-all duration-300 hover:scale-[1.02]"
+            className="snap-center shrink-0 w-[85%] md:w-auto relative backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-3xl p-8 flex flex-col gap-6 border border-brand-lime/40 ring-1 ring-brand-lime/20 bg-brand-lime/10 transition-all duration-300 hover:scale-[1.02]"
           >
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-lime text-black text-[10px] font-black font-mono uppercase tracking-widest whitespace-nowrap shadow-lime-glow">
               Recomendado
@@ -166,7 +166,7 @@ export default function SmartwatchSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="snap-center shrink-0 w-[85%] md:w-auto relative glass-card rounded-3xl p-8 flex flex-col gap-6 border border-blue-500/30 hover:border-blue-500/50 bg-blue-500/5 transition-all duration-300 hover:scale-[1.02]"
+            className="snap-center shrink-0 w-[85%] md:w-auto relative backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-3xl p-8 flex flex-col gap-6 border border-blue-500/30 hover:border-blue-500/50 bg-blue-500/10 transition-all duration-300 hover:scale-[1.02]"
           >
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-500/20 border border-blue-500/50 text-blue-400 text-[10px] font-black font-mono uppercase tracking-widest whitespace-nowrap">
               Premium
@@ -196,7 +196,7 @@ export default function SmartwatchSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="snap-center shrink-0 w-[85%] md:w-auto relative glass-card rounded-3xl p-8 flex flex-col gap-6 border border-red-500/30 hover:border-red-500/50 bg-red-500/5 transition-all duration-300 hover:scale-[1.02]"
+            className="snap-center shrink-0 w-[85%] md:w-auto relative backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-3xl p-8 flex flex-col gap-6 border border-red-500/30 hover:border-red-500/50 bg-red-500/10 transition-all duration-300 hover:scale-[1.02]"
           >
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-red-500/20 border border-red-500/50 text-red-500 text-[10px] font-black font-mono uppercase tracking-widest whitespace-nowrap">
               Evite

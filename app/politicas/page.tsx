@@ -32,6 +32,7 @@ const SECTIONS = [
         text: "Utilizamos os seguintes processadores de dados: OpenAI (processamento de linguagem natural e visão computacional), Stripe (processamento de pagamentos, sujeito à política de privacidade da Stripe), Meta/WhatsApp Business API (canal de comunicação). Nenhum dado é comercializado.",
       },
       {
+        id: "google-fit-limited-use",
         subtitle: "Conformidade com a Política de Dados do Google (Limited Use)",
         text: (
           <>
@@ -42,6 +43,11 @@ const SECTIONS = [
             , incluindo os requisitos de Uso Limitado (Limited Use). Os dados de saúde do Google Fit são consumidos exclusivamente para personalizar os treinos e feedbacks gerados pela Inteligência Artificial e jamais serão utilizados para servir anúncios ou vendidos para corretores de dados.
           </>
         ),
+      },
+      {
+        id: "google-fit-data-deletion",
+        subtitle: "Exclusão de Dados e Desvinculação do Google Fit",
+        text: "Para garantir o seu controle total (Data Deletion), você pode, a qualquer momento, solicitar a exclusão de seus dados e a desvinculação da sua conta do Google Fit de forma simplificada: basta pedir diretamente para a IA Marcão no WhatsApp com uma única mensagem simples (ex: 'Marcão, desvincule meu Google Fit' ou 'Exclua meus dados do Google Fit'). A IA processará o pedido imediatamente, revogando o acesso ao Google OAuth e eliminando os dados de saúde armazenados associados à sua conta.",
       },
     ],
   },
@@ -155,7 +161,7 @@ export default function PoliticasPage() {
 
               <div className="flex flex-col gap-8">
                 {section.content.map((block, i) => (
-                  <div key={i} className="border-l border-surface-border pl-6">
+                  <div key={i} id={(block as any).id} className="border-l border-surface-border pl-6 scroll-mt-12">
                     <h3 className="font-bold text-white mb-2 text-lg">{block.subtitle}</h3>
                     <p className="text-text-secondary leading-relaxed">{block.text}</p>
                   </div>
