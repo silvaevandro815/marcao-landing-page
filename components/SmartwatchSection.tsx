@@ -2,6 +2,19 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const Smartwatch3D = dynamic(() => import("./Smartwatch3D"), { 
+  ssr: false, 
+  loading: () => (
+    <div className="w-full h-[500px] lg:h-[700px] rounded-[2rem] bg-[#050A11] border border-surface-border flex items-center justify-center">
+      <div className="flex flex-col items-center gap-4">
+        <span className="w-4 h-4 rounded-full bg-brand-lime animate-pulse" />
+        <span className="text-xs font-mono text-brand-lime uppercase tracking-widest">Carregando interface...</span>
+      </div>
+    </div>
+  ) 
+});
 
 const CATEGORIES = [
   {
@@ -58,7 +71,7 @@ export default function SmartwatchSection() {
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div ref={titleRef} className="text-center mb-16">
+        <div ref={titleRef} className="text-center mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -74,56 +87,39 @@ export default function SmartwatchSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6"
+            className="font-display font-black text-4xl sm:text-5xl lg:text-7xl text-white leading-tight mb-6"
           >
-            Foco no Treino.{" "}
-            <br className="sm:hidden" />
-            <span className="gradient-text-lime">Sincronização Inteligente.</span>
+            Sincronização 
+            <br className="hidden sm:block" />
+            <span className="gradient-text-lime">Nível Vale do Silício.</span>
           </motion.h2>
           
           <motion.p
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            className="mt-4 text-text-secondary text-lg max-w-3xl mx-auto leading-relaxed"
+            className="mt-4 text-text-secondary text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed"
           >
-            Você pode deixar o celular em casa na hora de correr. O Marcão puxa seus dados assim que você volta. O fluxo de dados é 100% automático e invisível:
+            Deixe o celular em casa. O Marcão captura e cruza seus batimentos, zonas de esforço e metabolismo em tempo real. Se o treino foi "fofo", o terror começa no WhatsApp.
           </motion.p>
-
-          {/* Workflow Diagram */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.5 }}
-            className="mt-10 mb-6 mx-auto w-fit"
-          >
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 sm:p-5 glass-card rounded-2xl border border-surface-border mx-auto">
-              <div className="flex items-center gap-2 text-sm text-white font-medium">
-                <span className="text-xl">⌚</span>
-                <span className="hidden sm:inline">Relógio (Offline)</span>
-              </div>
-              <span className="text-surface-border text-lg rotate-90 sm:rotate-0">→</span>
-              
-              <div className="flex items-center gap-2 text-sm text-white font-medium">
-                <span className="text-xl">📱</span>
-                <span className="hidden sm:inline">App do Celular</span>
-              </div>
-              <span className="text-surface-border text-lg rotate-90 sm:rotate-0">→</span>
-              
-              <div className="flex items-center gap-2 text-sm text-white font-medium">
-                <span className="text-xl">☁️</span>
-                <span className="hidden md:inline">Strava / Fit</span>
-              </div>
-              <span className="text-brand-lime text-lg rotate-90 sm:rotate-0">→</span>
-              
-              <div className="flex items-center gap-2 text-sm text-brand-lime font-black uppercase tracking-wider bg-brand-lime/10 px-3 py-1.5 rounded-lg border border-brand-lime/20">
-                <span className="text-xl">🤖</span> Marcão Analisa
-              </div>
-            </div>
-          </motion.div>
         </div>
 
+        {/* 3D Smartwatch Interactive Hologram */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-24 w-full"
+        >
+          <Smartwatch3D />
+        </motion.div>
+
         {/* Categories Grid - Swipeable on mobile */}
+        <div className="text-center mb-10">
+          <h3 className="font-display font-black text-3xl text-white mb-4">Escolha sua máquina.</h3>
+          <p className="text-text-secondary">Se for comprar um relógio, não cometa erros. Estas são as recomendações do Marcão.</p>
+        </div>
+
         <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pt-6 pb-8 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {/* Categoria 1: Verde */}
           <motion.div

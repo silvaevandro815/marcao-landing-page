@@ -47,7 +47,7 @@ const FEATURES = [
     badge: "Saúde Contextual",
     title: "Ele Sabe Quando Você Está Mal",
     description:
-      "Grippe? Lesão? Ciclo menstrual? Marcão entende e pausa a cobrança. Vira modo recuperação: dicas de descanso, hidratação, dieta anti-inflamatória. Volta quando você estiver bem.",
+      "Gripe? Lesão? Ciclo menstrual? Marcão entende e pausa a cobrança. Vira modo recuperação: dicas de descanso, hidratação, dieta anti-inflamatória. Volta quando você estiver bem.",
     bullets: ["Estados: doente, lesionado, ciclo menstrual", "Previsão de recuperação automática", "Retoma o desafio com você quando melhorar"],
   },
   {
