@@ -405,9 +405,9 @@ export default function HeroScrollSequence() {
 
         {/* ── MOBILE COPY (bottom overlay) ── */}
           <motion.div
-            className="lg:hidden absolute bottom-0 left-0 right-0 z-20 px-4 pb-6 pt-12"
+            className="lg:hidden absolute bottom-4 left-0 right-0 z-20 px-5 pb-28 pt-32"
             style={{
-              background: `linear-gradient(to top, ${BG_COLOR} 60%, transparent)`,
+              background: `linear-gradient(to top, ${BG_COLOR} 75%, transparent)`,
               opacity: useTransform(smoothProgress, [0, 0.05, 0.95, 1], [0, 1, 1, 0]),
             }}
           >
