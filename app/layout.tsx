@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Suspense } from "react";
 import "./globals.css";
+import AdrenalineAudio from "@/components/AdrenalineAudio";
 
 export const metadata: Metadata = {
   title: "Marcão AI — Seu Personal Trainer no WhatsApp. Impiedoso. Inteligente. Eficaz.",
@@ -78,6 +79,8 @@ export default function RootLayout({
         <Suspense fallback={null}>
           {children}
         </Suspense>
+
+        <AdrenalineAudio />
       </body>
     </html>
   );
