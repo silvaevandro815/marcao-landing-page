@@ -3,22 +3,33 @@ import Script from "next/script";
 import { Suspense } from "react";
 import "./globals.css";
 import AdrenalineAudio from "@/components/AdrenalineAudio";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: "Marcão AI — Seu Personal Trainer no WhatsApp. Impiedoso. Inteligente. Eficaz.",
   description: "O único personal trainer com IA que te chama atenção quando você precisa, entende quando você está doente e nunca aceita desculpa. Desafios mensais personalizados, análise visual de treino e coaching 24h no WhatsApp.",
-  keywords: ["personal trainer ia", "coach whatsapp", "treino inteligente", "marcao ai", "desafio fitness"],
+  keywords: ["personal trainer ia", "coach whatsapp", "treino inteligente", "marcao ai", "desafio fitness", "personal trainer whatsapp", "coaching ia brasil"],
   openGraph: {
-    title: "Marcão AI — IA de Elite no seu WhatsApp",
-    description: "Coaching personalizado com IA. Zero papo furado. Resultados reais.",
+    title: "Marcão AI — O Personal Trainer com IA que Não Aceita Desculpa",
+    description: "Coaching personalizado 24h no WhatsApp. Ele analisa sua foto, cria sua meta mensal e te cobra quando você enrola. Sem app extra. Sem fidelidade.",
     type: "website",
     locale: "pt_BR",
     siteName: "Marcão AI",
+    url: "https://marcaopersonal.com",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Marcão AI — Personal Trainer com IA no WhatsApp",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Marcão AI — Seu Personal Trainer no WhatsApp",
-    description: "A IA que não aceita suas desculpas.",
+    description: "A IA que analisa sua foto, monta seu treino e não aceita suas desculpas.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -81,6 +92,7 @@ export default function RootLayout({
         </Suspense>
 
         <AdrenalineAudio />
+        <StickyMobileCTA />
       </body>
     </html>
   );

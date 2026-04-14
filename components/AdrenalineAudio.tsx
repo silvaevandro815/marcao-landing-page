@@ -73,16 +73,20 @@ export default function AdrenalineAudio() {
           e.stopPropagation(); // Evita acionar o click global se for o primeiro toque
           toggleMute();
         }}
-        className="fixed bottom-6 right-6 z-50 flex items-center justify-center p-3 sm:p-4 rounded-full glass-card border border-surface-border/50 bg-[#0A1628]/80 backdrop-blur-md shadow-[0_0_20px_rgba(57,255,20,0.1)] transition-transform hover:scale-105 active:scale-95 group"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 rounded-full glass-card border border-surface-border/50 bg-[#0A1628]/80 backdrop-blur-md shadow-[0_0_20px_rgba(57,255,20,0.1)] transition-transform hover:scale-105 active:scale-95 group"
         aria-label="Alternar Trilha Sonora"
       >
         {isMuted || !isPlaying ? (
-          <VolumeX className="w-5 h-5 sm:w-6 sm:h-6 text-text-secondary group-hover:text-white transition-colors" />
+          <>
+            <VolumeX className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors" />
+            <span className="text-[10px] font-mono text-text-muted group-hover:text-white transition-colors hidden sm:inline">🎵 Modo Treino</span>
+          </>
         ) : (
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center gap-2">
             {/* Efeito de pulso para o som ativado */}
-            <span className="absolute w-full h-full rounded-full bg-brand-lime opacity-30 animate-ping" />
-            <Volume2 className="w-5 h-5 sm:w-6 sm:h-6 text-brand-lime relative z-10" />
+            <span className="absolute w-5 h-5 rounded-full bg-brand-lime opacity-30 animate-ping" />
+            <Volume2 className="w-4 h-4 sm:w-5 sm:h-5 text-brand-lime relative z-10" />
+            <span className="text-[10px] font-mono text-brand-lime hidden sm:inline">Pausar Música</span>
           </div>
         )}
       </button>

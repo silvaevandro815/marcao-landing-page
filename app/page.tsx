@@ -7,6 +7,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import SmartwatchSection from "@/components/SmartwatchSection";
 import VideoDemoSection from "@/components/VideoDemoSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
 import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 
@@ -39,6 +40,9 @@ export default function Home() {
 
       {/* ── Hall da Fama: depoimentos marquee infinito ── */}
       <TestimonialsSection />
+
+      {/* ── FAQ: quebra de objeções antes do preço ── */}
+      <FAQSection />
 
       {/* ── Pricing: Plano Único R$ 49,90/mês ── */}
       <PricingSection />
