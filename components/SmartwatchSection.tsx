@@ -25,8 +25,8 @@ const CATEGORIES = [
     badge: "Recomendado",
     brands: "Amazfit, Xiaomi (Mi Band), Redmi Watch.",
     why: "Custam pouco e possuem software de elite (Zepp/Mi Fitness) que integra nativamente com Strava e Google Fit.",
-    extraTitle: "A Dúvida de Ouro (iOS):",
-    extraDesc: "'Tenho iPhone, posso usar Xiaomi?' SIM! O aplicativo da Xiaomi roda perfeitamente no iPhone, enviando seus treinos para o Strava e os dados de saúde para o Apple Health sem engasgos.",
+    extraTitle: "Integração Nativa:",
+    extraDesc: "O Marcão conecta-se diretamente ao Google Health Connect, consolidando seus dados de passos e treinos de qualquer um desses relógios em um só lugar.",
   },
   {
     id: "premium",
@@ -34,8 +34,8 @@ const CATEGORIES = [
     icon: "🔵",
     title: "A Elite Nativa",
     badge: "Premium",
-    brands: "Apple Watch, Garmin, Samsung Galaxy Watch.",
-    why: "São o padrão ouro do mercado. GPS impecável e sensores de precisão clínica. Integração direta, instantânea e sem gambiarras.",
+    brands: "Garmin, Samsung Galaxy Watch (WearOS).",
+    why: "São o padrão ouro para usuários Android. Sensores de precisão clínica e integração direta com o Google Health Connect sem gambiarras.",
   },
   {
     id: "avoid",
@@ -150,8 +150,8 @@ export default function SmartwatchSection() {
               </div>
 
               <div className="mt-2 p-4 rounded-xl bg-surface-dark/80 border border-brand-lime/10">
-                <p className="text-xs font-mono text-brand-cyan uppercase tracking-widest mb-1.5 line-clamp-1">A Dúvida de Ouro (iOS):</p>
-                <p className="text-text-secondary text-xs leading-relaxed"><span className="text-white font-semibold">"Tenho iPhone, posso usar Xiaomi?"</span> SIM! O aplicativo da Xiaomi roda perfeitamente no iPhone, enviando seus treinos para o Strava e os dados de saúde para o Apple Health sem engasgos.</p>
+                <p className="text-xs font-mono text-brand-cyan uppercase tracking-widest mb-1.5 line-clamp-1">Google Health Connect:</p>
+                <p className="text-text-secondary text-xs leading-relaxed">Integração nativa com o hub de saúde oficial do Android. Seus dados de passos, sono e treinos sincronizados automaticamente.</p>
               </div>
             </div>
           </motion.div>
@@ -176,7 +176,7 @@ export default function SmartwatchSection() {
             <div className="flex flex-col gap-4">
               <div>
                 <p className="text-xs font-mono text-blue-400 uppercase tracking-widest mb-1.5">Marcas</p>
-                <p className="text-white font-medium text-sm">Apple Watch, Garmin, Samsung Galaxy Watch.</p>
+                <p className="text-white font-medium text-sm">Garmin, Samsung Galaxy Watch (WearOS).</p>
               </div>
 
               <div>

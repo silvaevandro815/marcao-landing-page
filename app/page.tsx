@@ -4,8 +4,8 @@ import HeroScrollSequence from "@/components/HeroScrollSequence";
 import SocialProofBar from "@/components/SocialProofBar";
 import FeaturesSection from "@/components/FeaturesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import YoutubeExplanationSection from "@/components/YoutubeExplanationSection";
 import SmartwatchSection from "@/components/SmartwatchSection";
-import VideoDemoSection from "@/components/VideoDemoSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import PricingSection from "@/components/PricingSection";
@@ -34,6 +34,9 @@ export default function Home() {
 
       {/* ── How It Works: 5 passos da jornada ── */}
       <HowItWorksSection />
+
+      {/* ── Youtube Explain: Exposição da tecnologia via YouTube ── */}
+      <YoutubeExplanationSection />
 
       {/* ── Smartwatch: Compatibilidade de Elite ── */}
       <SmartwatchSection />

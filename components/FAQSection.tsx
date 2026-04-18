@@ -30,8 +30,8 @@ const FAQS = [
     a: "Não. O Marcão funciona 100% pelo WhatsApp, sem precisar de nenhum dispositivo extra. Se você tem smartwatch ou Google Fit, ele integra e usa os dados de sono e passos automaticamente. Mas é opcional — funciona perfeitamente sem.",
   },
   {
-    q: "Funciona no iPhone e no Android?",
-    a: "Sim. O Marcão é 100% pelo WhatsApp — funciona em qualquer celular com o app instalado, seja iOS ou Android. Sem app extra para baixar, sem login em plataforma, sem senha para lembrar.",
+    q: "O Marcão funciona no iPhone (iOS)?",
+    a: "No momento, não. O aplicativo do Marcão é exclusivo para Android para garantir a máxima precisão na integração de passos e treinos através do Google Health Connect. O desenvolvimento para iOS está no nosso radar para o futuro.",
   },
   {
     q: "Posso cancelar quando quiser?",
