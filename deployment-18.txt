@@ -1,0 +1,119 @@
+2026-Apr-18 21:18:18.744220 Docker 29.1.4 with BuildKit and Buildx detected on deployment server (localhost).
+2026-Apr-18 21:18:18.753391 Starting deployment of silvaevandro815/marcao-landing-page:main to localhost.
+2026-Apr-18 21:18:18.973982 Preparing container with helper image: ghcr.io/coollabsio/coolify-helper:1.0.13
+2026-Apr-18 21:18:20.469608 ----------------------------------------
+2026-Apr-18 21:18:20.477640 Importing silvaevandro815/marcao-landing-page:main (commit sha 15e6bc522fdb098290a0c21c9ea65efe5a9cf2b1) to /artifacts/ojn36kwn47ty1i1qzfd4xs7u.
+2026-Apr-18 21:18:25.330661 Generating nixpacks configuration with: nixpacks plan -f json --env 'NIXPACKS_NODE_VERSION=22' --env 'COOLIFY_URL=https://marcaopersonal.com,https://www.marcaopersonal.com' --env 'COOLIFY_FQDN=marcaopersonal.com,www.marcaopersonal.com' --env 'COOLIFY_BRANCH=main' --env 'COOLIFY_RESOURCE_UUID=a101gy8a5hlalesa3m2q2739' --build-cmd 'npm run build' --install-cmd 'npm install' /artifacts/ojn36kwn47ty1i1qzfd4xs7u
+2026-Apr-18 21:18:25.890205 Found application type: node.
+2026-Apr-18 21:18:25.904849 If you need further customization, please check the documentation of Nixpacks: https://nixpacks.com/docs/providers/node
+2026-Apr-18 21:18:26.794984 ----------------------------------------
+2026-Apr-18 21:18:26.807390 Building docker image started.
+2026-Apr-18 21:18:26.820919 To check the current progress, click on Show Debug Logs.
+2026-Apr-18 21:21:21.372766 ========================================
+2026-Apr-18 21:21:21.387433 Deployment failed: Command execution failed (exit code 1): docker exec ojn36kwn47ty1i1qzfd4xs7u bash -c 'bash /artifacts/build.sh'
+2026-Apr-18 21:21:21.387433 Error: #0 building with "default" instance using docker driver
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #1 [internal] load build definition from Dockerfile
+2026-Apr-18 21:21:21.387433 #1 transferring dockerfile: 1.18kB done
+2026-Apr-18 21:21:21.387433 #1 DONE 0.0s
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #2 [internal] load metadata for ghcr.io/railwayapp/nixpacks:ubuntu-1745885067
+2026-Apr-18 21:21:21.387433 #2 DONE 1.2s
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #3 [internal] load .dockerignore
+2026-Apr-18 21:21:21.387433 #3 transferring context: 2B done
+2026-Apr-18 21:21:21.387433 #3 DONE 0.0s
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #4 [ 1/11] FROM ghcr.io/railwayapp/nixpacks:ubuntu-1745885067@sha256:d45c89d80e13d7ad0fd555b5130f22a866d9dd10e861f589932303ef2314c7de
+2026-Apr-18 21:21:21.387433 #4 resolve ghcr.io/railwayapp/nixpacks:ubuntu-1745885067@sha256:d45c89d80e13d7ad0fd555b5130f22a866d9dd10e861f589932303ef2314c7de 0.1s done
+2026-Apr-18 21:21:21.387433 #4 DONE 0.1s
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #5 [internal] load build context
+2026-Apr-18 21:21:21.387433 #5 ...
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #4 [ 1/11] FROM ghcr.io/railwayapp/nixpacks:ubuntu-1745885067@sha256:d45c89d80e13d7ad0fd555b5130f22a866d9dd10e861f589932303ef2314c7de
+2026-Apr-18 21:21:21.387433 #4 DONE 0.3s
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #5 [internal] load build context
+2026-Apr-18 21:21:21.387433 #5 ...
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #6 [ 2/11] WORKDIR /app/
+2026-Apr-18 21:21:21.387433 #6 DONE 0.2s
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #5 [internal] load build context
+2026-Apr-18 21:21:21.387433 #5 transferring context: 57.89MB 0.7s done
+2026-Apr-18 21:21:21.387433 #5 DONE 0.8s
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #7 [ 3/11] COPY .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix
+2026-Apr-18 21:21:21.387433 #7 DONE 0.1s
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 #8 [ 4/11] RUN nix-env -if .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix && nix-collect-garbage -d
+2026-Apr-18 21:21:21.387433 #8 0.770 unpacking 'https://github.com/NixOS/nixpkgs/archive/ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.tar.gz' into the Git cache...
+2026-Apr-18 21:21:21.387433 #8 59.66 unpacking 'https:<REDACTED>@15.2.4: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.
+2026-Apr-18 21:21:21.387433 #11 22.70
+2026-Apr-18 21:21:21.387433 #11 22.70 added 188 packages, and audited 189 packages in 22s
+2026-Apr-18 21:21:21.387433 #11 22.70
+2026-Apr-18 21:21:21.387433 #11 22.70 31 packages are looking for funding
+2026-Apr-18 21:21:21.387433 #11 22.70 run `npm fund` for details
+2026-Apr-18 21:21:21.387433 #11 22.82
+2026-Apr-18 21:21:21.387433 #11 22.82 1 critical severity vulnerability
+2026-Apr-18 21:21:21.387433 #11 22.82
+2026-Apr-18 21:21:21.387433 #11 22.82 To address all issues, run:<REDACTED>@0.1.0 build
+2026-Apr-18 21:21:21.387433 #13 0.483 > next build
+2026-Apr-18 21:21:21.387433 #13 0.483
+2026-Apr-18 21:21:21.387433 #13 1.535 ⚠ `devIndicators.appIsrStatus` is deprecated and no longer configurable. Please remove it from next.config.ts.
+2026-Apr-18 21:21:21.387433 #13 1.536 ⚠ `devIndicators.buildActivity` is deprecated and no longer configurable. Please remove it from next.config.ts.
+2026-Apr-18 21:21:21.387433 #13 1.539 ⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2026-Apr-18 21:21:21.387433 #13 1.555 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2026-Apr-18 21:21:21.387433 #13 1.555 This information is used to shape Next.js' roadmap and prioritize features.
+2026-Apr-18 21:21:21.387433 #13 1.555 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2026-Apr-18 21:21:21.387433 #13 1.555 https://nextjs.org/telemetry
+2026-Apr-18 21:21:21.387433 #13 1.555
+2026-Apr-18 21:21:21.387433 #13 1.673 ▲ Next.js 15.2.4
+2026-Apr-18 21:21:21.387433 #13 1.673
+2026-Apr-18 21:21:21.387433 #13 1.798 Creating an optimized production build ...
+2026-Apr-18 21:21:21.387433 #13 39.15 ✓ Compiled successfully
+2026-Apr-18 21:21:21.387433 #13 39.17 Linting and checking validity of types ...
+2026-Apr-18 21:21:21.387433 #13 47.67 Failed to compile.
+2026-Apr-18 21:21:21.387433 #13 47.67
+2026-Apr-18 21:21:21.387433 #13 47.67 ./app/page.tsx:33:8
+2026-Apr-18 21:21:21.387433 #13 47.67 Type error: Cannot find name 'VideoDemoSection'.
+2026-Apr-18 21:21:21.387433 #13 47.67
+2026-Apr-18 21:21:21.387433 #13 47.67 31 |
+2026-Apr-18 21:21:21.387433 #13 47.67 32 | {/* ── Video Demo: Silicon Valley mobile frame with demo video ── */}
+2026-Apr-18 21:21:21.387433 #13 47.67 > 33 | <VideoDemoSection />
+2026-Apr-18 21:21:21.387433 #13 47.67 | ^
+2026-Apr-18 21:21:21.387433 #13 47.67 34 |
+2026-Apr-18 21:21:21.387433 #13 47.67 35 | {/* ── How It Works: 5 passos da jornada ── */}
+2026-Apr-18 21:21:21.387433 #13 47.67 36 | <HowItWorksSection />
+2026-Apr-18 21:21:21.387433 #13 47.75 Next.js build worker exited with code: 1 and signal: null
+2026-Apr-18 21:21:21.387433 #13 ERROR: process "/bin/bash -ol pipefail -c npm run build" did not complete successfully: exit code: 1
+2026-Apr-18 21:21:21.387433 ------
+2026-Apr-18 21:21:21.387433 > [ 9/11] RUN npm run build:
+2026-Apr-18 21:21:21.387433 47.67 Type error: Cannot find name 'VideoDemoSection'.
+2026-Apr-18 21:21:21.387433 47.67
+2026-Apr-18 21:21:21.387433 47.67 31 |
+2026-Apr-18 21:21:21.387433 47.67 32 | {/* ── Video Demo: Silicon Valley mobile frame with demo video ── */}
+2026-Apr-18 21:21:21.387433 47.67 > 33 | <VideoDemoSection />
+2026-Apr-18 21:21:21.387433 47.67 | ^
+2026-Apr-18 21:21:21.387433 47.67 34 |
+2026-Apr-18 21:21:21.387433 47.67 35 | {/* ── How It Works: 5 passos da jornada ── */}
+2026-Apr-18 21:21:21.387433 47.67 36 | <HowItWorksSection />
+2026-Apr-18 21:21:21.387433 47.75 Next.js build worker exited with code: 1 and signal: null
+2026-Apr-18 21:21:21.387433 ------
+2026-Apr-18 21:21:21.387433
+2026-Apr-18 21:21:21.387433 1 warning found (use docker --debug to expand):
+2026-Apr-18 21:21:21.387433 - UndefinedVar: Usage of undefined variable '$NIXPACKS_PATH' (line 18)
+2026-Apr-18 21:21:21.387433 Dockerfile:24
+2026-Apr-18 21:21:21.387433 --------------------
+2026-Apr-18 21:21:21.387433 22 | # build phase
+2026-Apr-18 21:21:21.387433 23 | COPY . /app/.
+2026-Apr-18 21:21:21.387433 24 | >>> RUN npm run build
+2026-Apr-18 21:21:21.387433 25 |
+2026-Apr-18 21:21:21.387433 26 |
+2026-Apr-18 21:21:21.387433 --------------------
+2026-Apr-18 21:21:21.387433 ERROR: failed to build: failed to solve: process "/bin/bash -ol pipefail -c npm run build" did not complete successfully: exit code: 1
+2026-Apr-18 21:21:21.387433 exit status 1
+2026-Apr-18 21:21:21.552894 ========================================
+2026-Apr-18 21:21:21.570249 Deployment failed. Removing the new version of your application.
+2026-Apr-18 21:21:22.188399 Gracefully shutting down build container: ojn36kwn47ty1i1qzfd4xs7u

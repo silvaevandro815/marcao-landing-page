@@ -4,6 +4,7 @@ import HeroScrollSequence from "@/components/HeroScrollSequence";
 import SocialProofBar from "@/components/SocialProofBar";
 import FeaturesSection from "@/components/FeaturesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import VideoDemoSection from "@/components/VideoDemoSection";
 import YoutubeExplanationSection from "@/components/YoutubeExplanationSection";
 import SmartwatchSection from "@/components/SmartwatchSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
