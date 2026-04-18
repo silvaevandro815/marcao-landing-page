@@ -65,7 +65,7 @@ MARCAO_LANDING_PAGE/
 
 ## WhatsApp do Marcão
 
-Número: `5532984138183` (já integrado em todos os CTAs)
+Número: `5532984138133` (já integrado em todos os CTAs)
 
 ## Frames de Scroll (futura implementação)
 

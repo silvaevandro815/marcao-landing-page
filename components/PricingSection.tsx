@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useUTM } from "@/hooks/useUTM";
 
-const WA_LINK = "https://wa.me/5532984138183?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA.";
+const WA_LINK = "https://wa.me/5532984138133?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA.";
 
 const INCLUDES = [
   "✅ Onboarding completo (21 passos, 7 modalidades)",

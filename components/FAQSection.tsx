@@ -159,7 +159,7 @@ export default function FAQSection() {
           <p className="text-text-muted text-sm mb-4">Ainda tem dúvida? Pergunta direto pro Marcão.</p>
           <a
             id="faq-cta-whatsapp"
-            href="https://wa.me/5532984138183?text=Oi%20Marc%C3%A3o!%20Tenho%20uma%20d%C3%BAvida%20antes%20de%20assinar."
+            href="https://wa.me/5532984138133?text=Oi%20Marc%C3%A3o!%20Tenho%20uma%20d%C3%BAvida%20antes%20de%20assinar."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border border-brand-lime/30 text-brand-lime font-semibold text-sm hover:bg-brand-lime/10 transition-all duration-300"

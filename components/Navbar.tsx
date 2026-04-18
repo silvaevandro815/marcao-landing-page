@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { href: "#planos", label: "Planos" },
 ];
 
-const WA_LINK = "https://wa.me/5532984138183?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA.";
+const WA_LINK = "https://wa.me/5532984138133?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA.";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

@@ -181,7 +181,7 @@ export default function HowItWorksSection() {
           className="mt-16 text-center"
         >
           <a
-            href="https://wa.me/5532984138183?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA."
+            href="https://wa.me/5532984138133?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-lime to-[#2ecc71] text-black font-extrabold text-lg shadow-[0_0_20px_rgba(57,255,20,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(57,255,20,0.6)]"

@@ -47,7 +47,7 @@ export function useUTM() {
    * nós recebamos a origem completa de forma elegante e segura.
    */
   const getWhatsAppCTA = (baseMessage: string): string => {
-    const telefone = "5532984138183";
+    const telefone = "5532984138133";
     let finalMessage = baseMessage;
 
     // Constrói uma string de tracking compacta e invisível aos olhos destreinados,

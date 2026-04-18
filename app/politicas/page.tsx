@@ -179,7 +179,7 @@ export default function PoliticasPage() {
             Nossa equipe está pronta para responder qualquer questão sobre privacidade ou termos.
           </p>
           <a
-            href="https://wa.me/5532984138183?text=Ol%C3%A1!%20Tenho%20d%C3%BAvidas%20sobre%20as%20pol%C3%ADticas%20do%20Marc%C3%A3o%20AI."
+            href="https://wa.me/5532984138133?text=Ol%C3%A1!%20Tenho%20d%C3%BAvidas%20sobre%20as%20pol%C3%ADticas%20do%20Marc%C3%A3o%20AI."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-lime text-black font-bold text-sm hover:shadow-lime-glow transition-all duration-300 hover:scale-105"
