@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     q: "E se meu aluno não usar o WhatsApp?",
-    a: "O Marcão opera 100% via WhatsApp — que é o app mais instalado no Brasil. Praticamente todos os seus alunos já têm. Sem instalação extra, sem cadastro em plataforma. Basta você compartilhar o link com o aluno.",
+    a: "O Marcão opera principalmente via WhatsApp para o chat diário. Além disso, o aluno precisará baixar nosso aplicativo oficial (disponível para Android) apenas para fazer a ponte e sincronizar os dados de saúde do relógio e do celular. Feita essa configuração rápida, a mágica acontece no WhatsApp.",
   },
   {
     q: "Como o sistema detecta que um aluno está em risco de cancelar?",
@@ -23,15 +23,15 @@ const FAQS = [
   },
   {
     q: "Meus alunos precisam ter smartwatch?",
-    a: "Não. O Marcão funciona 100% pelo WhatsApp, sem nenhum dispositivo extra. Se o aluno tem smartwatch Android com Google Health Connect, os dados de saúde são integrados automaticamente para análises ainda mais precisas.",
+    a: "Não. O aluno só precisa ter um celular Android e baixar nosso app de sincronização de saúde. Se ele tiver um smartwatch Android com Google Health Connect, os dados serão ainda mais ricos e precisos, mas não é obrigatório.",
   },
   {
     q: "Funciona para academia com muitos alunos?",
-    a: "Sim! Não há limite de alunos. Você paga R$ 49,90 por aluno/mês e o Marcão acompanha cada um com a mesma qualidade e personalização — do primeiro ao centésimo aluno.",
+    a: "Sim! Não há limite de alunos. O aluno paga apenas R$ 79,90 por mês, e o personal/dono de academia ainda fica com uma comissão de R$ 29,90 por aluno recorrente! O Marcão acompanha cada um com a mesma qualidade — do primeiro ao centésimo aluno.",
   },
   {
     q: "O Marcão funciona para alunos com iPhone (iOS)?",
-    a: "O WhatsApp sim — 100% funcional para iOS e Android. O aplicativo de monitoramento de saúde via Google Health Connect é exclusivo Android. Alunos com iPhone ainda recebem check-in diário, desafios e coaching, mas sem os dados biométricos automáticos.",
+    a: "No momento, NÃO. O aluno precisa estar ciente de que a IA do Marcão funciona exclusivamente em sistemas Android. Isso ocorre porque dependemos do nosso aplicativo de integração com o Google Health Connect para extrair os dados vitais de saúde.",
   },
   {
     q: "Posso cancelar quando quiser?",

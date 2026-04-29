@@ -48,7 +48,7 @@ export default function Home() {
       {/* ── FAQ: quebra de objeções antes do preço ── */}
       <FAQSection />
 
-      {/* ── Pricing: Plano Único R$ 49,90/mês ── */}
+      {/* ── Pricing: Plano Único R$ 79,90/mês ── */}
       <PricingSection />
 
       {/* ── Footer: mega CTA + links ── */}

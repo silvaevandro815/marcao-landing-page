@@ -11,7 +11,7 @@ const FEATURES = [
     badge: "Dashboard do Parceiro",
     title: "Você Vê Tudo. Sem Nenhum Aluno Escapar.",
     description:
-      "Dashboard exclusivo para o parceiro com visão completa de cada aluno: sono, passos, treinos, alertas de saúde e engajamento. Nunca mais perca um aluno sem perceber que ele estava some.",
+      "Dashboard exclusivo para o parceiro com visão completa de cada aluno: sono, passos, treinos, alertas de saúde e engajamento. Nunca mais perca um aluno sem perceber que ele sumiu.",
     bullets: ["Painel de alunos ativos e inativos", "Alertas de sono ruim e inatividade +3 dias", "Ranking semanal por performance"],
   },
   {
@@ -183,7 +183,7 @@ export default function FeaturesSection() {
             Tecnologia que{" "}
             <span className="gradient-text-lime">mede</span>,<br />
             Parceiro que{" "}
-            <span className="gradient-text-orange">scala.</span>
+            <span className="gradient-text-orange">escala.</span>
           </motion.h2>
 
           <motion.p

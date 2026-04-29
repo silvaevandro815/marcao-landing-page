@@ -23,7 +23,7 @@ const INCLUDES = [
 const FAQS = [
   { q: "Quantos alunos eu posso cadastrar?", a: "Sem limite! Você recebe R$ 29,90 por aluno/mês. Quanto mais alunos, maior a sua renda passiva mensal." },
   { q: "Posso cancelar um aluno a qualquer momento?", a: "Sim, sem fidelidade e sem burocracia. É só remover o aluno do plano — a cobrança pro rata para no mesmo mês." },
-  { q: "Meus alunos precisam baixar algum app?", a: "Não. Tudo 100% via WhatsApp. Seus alunos recebem o link do Marcão e fazem o onboarding direto no chat, sem instalação." },
+  { q: "Meus alunos precisam baixar algum app?", a: "Sim, eles precisam baixar o app Marcão (Android) exclusivamente para sincronizar os dados de saúde. Mas toda a interação e acompanhamento ocorrem no WhatsApp." },
 ];
 
 const EARNINGS = [
