@@ -6,12 +6,12 @@ import AdrenalineAudio from "@/components/AdrenalineAudio";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Marcão AI — Seu Personal Trainer no WhatsApp. Impiedoso. Inteligente. Eficaz.",
-  description: "O único personal trainer com IA que te chama atenção quando você precisa, entende quando você está doente e nunca aceita desculpa. Desafios mensais personalizados, análise visual de treino e coaching 24h no WhatsApp.",
-  keywords: ["personal trainer ia", "coach whatsapp", "treino inteligente", "marcao ai", "desafio fitness", "personal trainer whatsapp", "coaching ia brasil"],
+  title: "Marcão AI — A IA que Monitora Seus Alunos 24h. Para Personals e Academias.",
+  description: "O copiloto de IA para personal trainers e donos de academia. Marcão monitora a saúde e performance de cada aluno no WhatsApp, envia alertas inteligentes e aumenta a retenção da sua base. Escale seus resultados.",
+  keywords: ["ia para personal trainer", "software academia ia", "gestao de alunos ia", "marcao ai parceiro", "personal trainer whatsapp ia", "retenção de alunos academia", "coaching ia b2b", "dashboard personal trainer"],
   openGraph: {
-    title: "Marcão AI — O Personal Trainer com IA que Não Aceita Desculpa",
-    description: "Coaching personalizado 24h no WhatsApp. Ele analisa sua foto, cria sua meta mensal e te cobra quando você enrola. Sem app extra. Sem fidelidade.",
+    title: "Marcão AI — A IA que Monitora Seus Alunos 24h. Para Personals e Academias.",
+    description: "Transforme sua academia ou carteira de alunos com IA. O Marcão monitora saúde, performance e engajamento de cada aluno no WhatsApp — e envia alertas direto pro seu dashboard quando alguém some ou dorme mal.",
     type: "website",
     locale: "pt_BR",
     siteName: "Marcão AI",
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Marcão AI — Personal Trainer com IA no WhatsApp",
+        alt: "Marcão AI — IA para Personal Trainers e Academias",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marcão AI — Seu Personal Trainer no WhatsApp",
-    description: "A IA que analisa sua foto, monta seu treino e não aceita suas desculpas.",
+    title: "Marcão AI — A IA Copiloto do Personal Trainer",
+    description: "Monitore a saúde e performance dos seus alunos 24h no WhatsApp. Alertas inteligentes, dashboard de parceiro e muito mais.",
     images: ["/og-image.jpg"],
   },
   robots: {

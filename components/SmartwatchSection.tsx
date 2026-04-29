@@ -79,7 +79,7 @@ export default function SmartwatchSection() {
             className="inline-flex items-center gap-2 mb-4"
           >
             <div className="w-8 h-px bg-brand-lime/50" />
-            <span className="text-xs font-mono text-brand-lime uppercase tracking-widest">O Arsenal do Monstro</span>
+            <span className="text-xs font-mono text-brand-lime uppercase tracking-widest">Monitoramento de Saúde</span>
             <div className="w-8 h-px bg-brand-lime/50" />
           </motion.div>
 
@@ -89,9 +89,9 @@ export default function SmartwatchSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-black text-4xl sm:text-5xl lg:text-7xl text-white leading-tight mb-6"
           >
-            Sincronização 
+            Dados Reais 
             <br className="hidden sm:block" />
-            <span className="gradient-text-lime">Nível Vale do Silício.</span>
+            <span className="gradient-text-lime">dos Seus Alunos.</span>
           </motion.h2>
           
           <motion.p
@@ -100,7 +100,7 @@ export default function SmartwatchSection() {
             transition={{ delay: 0.3 }}
             className="mt-4 text-text-secondary text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed"
           >
-            Deixe o celular em casa. O Marcão captura e cruza seus batimentos, zonas de esforço e metabolismo em tempo real. Se o treino foi "fofo", o terror começa no WhatsApp.
+            Cada aluno com smartwatch vira uma fonte de dados de saúde. O Marcão lê batimentos, sono, passos e zonas de esforço — e te alerta quando algo sai do normal. Você intervem antes da lesão ou do abandono.
           </motion.p>
         </div>
 
@@ -116,8 +116,8 @@ export default function SmartwatchSection() {
 
         {/* Categories Grid - Swipeable on mobile */}
         <div className="text-center mb-10">
-          <h3 className="font-display font-black text-3xl text-white mb-4">Escolha sua máquina.</h3>
-          <p className="text-text-secondary">Se for comprar um relógio, não cometa erros. Estas são as recomendações do Marcão.</p>
+          <h3 className="font-display font-black text-3xl text-white mb-4">Relógios que integram com o Marcão.</h3>
+          <p className="text-text-secondary">Oriente seus alunos sobre qual relógio comprar para maximizar a qualidade dos dados que chegam até você.</p>
         </div>
 
         <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pt-6 pb-8 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">

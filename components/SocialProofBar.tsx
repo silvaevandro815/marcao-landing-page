@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const LOGOS = [
   { name: "WhatsApp", icon: "📱" },
   { name: "OpenAI Vision", icon: "🧠" },
-  { name: "Anti-Alucinação", icon: "🔒" },
-  { name: "Celery Beat", icon: "⏰" },
+  { name: "Dashboard Parceiro", icon: "📊" },
+  { name: "Anti-Churn IA", icon: "🔔" },
   { name: "PostgreSQL", icon: "🗃️" },
   { name: "RAG Memory", icon: "💾" },
   { name: "LGPD Compliant", icon: "📜" },
@@ -14,8 +14,8 @@ const LOGOS = [
 ];
 
 const STATS = [
-  { value: "+247", label: "Alunos Ativos" },
-  { value: "35", label: "Calibrações de Nível" },
+  { value: "+247", label: "Alunos Monitorados" },
+  { value: "72h", label: "Alerta de Inatividade" },
   { value: "7", label: "Modalidades Esportivas" },
   { value: "24/7", label: "Disponibilidade" },
 ];

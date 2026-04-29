@@ -8,74 +8,74 @@ const FEATURES = [
   {
     icon: <Brain className="w-6 h-6" />,
     color: "lime",
-    badge: "Anti-Alucinação",
-    title: "Ele Nunca Inventa. Nunca Mente.",
+    badge: "Dashboard do Parceiro",
+    title: "Você Vê Tudo. Sem Nenhum Aluno Escapar.",
     description:
-      "Enquanto outros bots te elogiam mesmo quando você não treinou, o Marcão só fala o que é real. Cada mensagem é baseada nos seus dados verdadeiros — km rodados, sessões registradas, check-ins feitos.",
-    bullets: ["Zero papo de bot genérico", "Nunca elogia quando você não treinou", "Histórico completo vira contexto real"],
+      "Dashboard exclusivo para o parceiro com visão completa de cada aluno: sono, passos, treinos, alertas de saúde e engajamento. Nunca mais perca um aluno sem perceber que ele estava some.",
+    bullets: ["Painel de alunos ativos e inativos", "Alertas de sono ruim e inatividade +3 dias", "Ranking semanal por performance"],
   },
   {
     icon: <ScanEye className="w-6 h-6" />,
     color: "orange",
     badge: "Vision AI",
-    title: "Mandou a Foto. O Marcão Já Viu — e Julgou.",
+    title: "Análise de Foto do Aluno. Você Avalia. A IA Documenta.",
     description:
-      "Análise quinzenal de fotos no espelho — frente e costas. Ele compara, avalia postura, composição e evolução, e fala na lata se você está progredindo ou enrolando.",
-    bullets: ["Foto de frente + costas a cada 15 dias", "Feedback técnico de postura e evolução", "Comparação visual entre períodos"],
+      "O Marcão solicita foto de frente e costas de cada aluno a cada 15 dias. Compara, avalia postura e evolução — e entrega o feedback técnico direto no WhatsApp do aluno, liberando seu tempo.",
+    bullets: ["Foto de frente + costas a cada 15 dias por aluno", "Feedback técnico de postura e evolução automático", "Comparação visual entre períodos documentada"],
   },
   {
     icon: <Target className="w-6 h-6" />,
     color: "cyan",
     badge: "Calibração Científica",
-    title: "Sua Meta do Mês Não é Chute — É Ciência.",
+    title: "Cada Aluno Tem Sua Meta Personalizada. Automática.",
     description:
-      "Corredor? 50km. Sedentário? 10km no início. A meta é gerada com base no seu histórico real — desafiadora o suficiente pra te mover, alcançável o suficiente pra você não desistir.",
-    bullets: ["7 esportes × 5 níveis = 35 combinações", "Metas em km, sessões, passos ou PRs", "Evolui conforme seu streak cresce"],
+      "O Marcão gera metas mensais calibradas para cada aluno com base no histórico real — sem trabalho seu. Do sedentário ao atleta, em 7 modalidades. Você cuida da estratégia, a IA executa.",
+    bullets: ["7 esportes × 5 níveis = 35 calibrações por aluno", "Metas em km, sessões, passos ou PRs", "Evolui conforme o progresso do aluno"],
   },
   {
     icon: <Sunrise className="w-6 h-6" />,
     color: "lime",
-    badge: "Check-in 07h",
-    title: "Todo Dia às 7h Ele Bate na Sua Porta.",
+    badge: "Check-in Diário 07h",
+    title: "Todo Dia às 7h o Marcão Acorda Cada Aluno Seu.",
     description:
-      "Check-in diário no WhatsApp, sem exceção. Ele sabe o que você fez ontem, quantos dias faltam para a meta e qual é o próximo passo. É o único personal que nunca falta.",
-    bullets: ["Relatório diário com dados reais do mês", "Cobra como treinador, não como bot", "Sabe quando é dia de descanso programado"],
+      "Check-in diário automático no WhatsApp de cada aluno — sem você precisar fazer nada. Ele sabe o que cada um fez ontem, cobra como treinador e mantém o engajamento alto entre suas sessões.",
+    bullets: ["Relatório diário personalizado por aluno", "Cobrança automática entre suas sessões presenciais", "Você é avisado quando o aluno não responde"],
   },
   {
     icon: <HeartPulse className="w-6 h-6" />,
     color: "orange",
     badge: "Modo Recuperação",
-    title: "Você Ficou Doente. O Marcão Já Sabe — e Parou de Cobrar.",
+    title: "Aluno Doente? A IA Já Sabe e Gerencia Sozinha.",
     description:
-      "Gripe, lesão ou ciclo menstrual? Ele pausou a cobrança, entrou em modo recuperação e mandou dicas de descanso. Volta ao treino só quando você disser que está bem.",
-    bullets: ["Reconhece doença, lesão e ciclo menstrual", "Dicas de descanso, hidratação e dieta", "Retoma o desafio no ritmo certo quando você melhorar"],
+      "Gripe, lesão ou ciclo menstrual? O Marcão pausa a cobrança, entra em modo recuperação e te alerta sobre o aluno. Você é notificado e aparece na hora certa para mostrar que se importa.",
+    bullets: ["Reconhece doença, lesão e ciclo menstrual", "Alerta o parceiro sobre o aluno em recuperação", "Retoma treino no ritmo certo quando o aluno melhora"],
   },
   {
     icon: <Trophy className="w-6 h-6" />,
     color: "cyan",
-    badge: "Desafio Mensal",
-    title: "Dia 1 do Mês: Sua Missão Chegou no WhatsApp.",
+    badge: "Retenção Anti-Churn",
+    title: "Aluno Inativo 3 Dias? Você Recebe o Alerta. Agora.",
     description:
-      "Desafio épico e personalizado direto no chat. Você aceita — e sente aquele frio na barriga. O Marcão monitora, cobra e comemora contigo até o último dia do mês.",
-    bullets: ["Texto motivacional gerado por IA", "Aceitar/Recusar direto pelo WhatsApp", "Nudges de progresso durante todo o mês"],
+      "O maior motivo de cancelamento de academia é o sumiço do aluno sem ninguém perceber. O Marcão detecta inatividade em 72h e te avisa para você intervir antes que seja tarde demais.",
+    bullets: ["Alerta automático após 3 dias sem treino", "Relatório de risco de cancelamento por aluno", "Ação proativa: o parceiro recebe contexto completo"],
   },
   {
     icon: <CalendarDays className="w-6 h-6" />,
     color: "lime",
     badge: "Programação Inteligente",
-    title: "Ele Sabe Que Terça é Seu Dia de Descanso.",
+    title: "Escalabilidade Real: Uma IA Atendendo Todos Seus Alunos.",
     description:
-      "Nunca te cobra no dia errado. Nunca ignora falta no dia certo. Você configura sua semana no onboarding — ele lembra e respeita pra sempre.",
-    bullets: ["Programação A/B/C totalmente configurável", "Dias de descanso respeitados automaticamente", "Sugere ajuste de volume conforme seu progresso"],
+      "O Marcão opera como uma extensão sua. Cada aluno tem sua agenda, nível e objetivos respeitados automaticamente. Você pode crescer sua carteira sem perder qualidade no acompanhamento.",
+    bullets: ["Programação A/B/C configurável por aluno", "Dias de descanso respeitados automaticamente", "Acompanha dezenas de alunos sem perder personalização"],
   },
   {
     icon: <MapPin className="w-6 h-6" />,
     color: "orange",
     badge: "Radar de Eventos",
-    title: "Tem Corrida Perto de Você Esse Mês. O Marcão Já Sabe.",
+    title: "Eventos Esportivos Regionais Para Motivar Seus Alunos.",
     description:
-      "Toda semana ele pesquisa eventos esportivos locais — corridas, crossfit, artes marciais — e te avisa no WhatsApp com link de inscrição incluso.",
-    bullets: ["Busca inteligente por cidade e modalidade", "Aviso toda semana no domingo", "Link direto de inscrição incluído"],
+      "Toda semana o Marcão pesquisa eventos locais — corridas, crossfit, artes marciais — e avisa seus alunos no WhatsApp. Mais engajamento, mais motivação, mais retenção na sua academia.",
+    bullets: ["Busca inteligente por cidade e modalidade do aluno", "Aviso toda semana com link de inscrição", "Aumenta o engajamento e senso de comunidade"],
   },
 ];
 
@@ -181,9 +181,9 @@ export default function FeaturesSection() {
             className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight"
           >
             Tecnologia que{" "}
-            <span className="gradient-text-lime">sente</span>,<br />
-            Coach que{" "}
-            <span className="gradient-text-orange">cobra</span>.
+            <span className="gradient-text-lime">mede</span>,<br />
+            Parceiro que{" "}
+            <span className="gradient-text-orange">scala.</span>
           </motion.h2>
 
           <motion.p
@@ -192,8 +192,8 @@ export default function FeaturesSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-text-secondary text-lg max-w-2xl mx-auto"
           >
-            Oito módulos de IA trabalhando juntos para analisar, motivar e cobrar.
-            Sem filtros. Sem desculpas. Só resultado.
+            Oito módulos de IA trabalhando juntos para monitorar, motivar e reter seus alunos.
+            Automaticamente. Sem você precisar fazer nada entre as sessões.
           </motion.p>
         </div>
 

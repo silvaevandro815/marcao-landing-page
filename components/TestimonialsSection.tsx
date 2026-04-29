@@ -10,87 +10,87 @@ import { motion } from "framer-motion";
 
 const TESTIMONIALS_ROW1 = [
   {
-    name: "Rodrigo S.",
-    sport: "Corrida • Intermediário",
+    name: "Pedro A. — Personal",
+    sport: "Carteira de 32 alunos • SP",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    result: "📊 +230km em 3 meses — de 80km para 380km/mês",
-    userMsg: "Marcão, bati 380km de ciclismo esse mês. Nem nos dias de chuva parei.",
-    marcaoMsg: "380km — bate seu recorde dos últimos 12 meses. Isso é evolução de atleta. Mês que vem: 420km. ACEITA? 🔥",
+    result: "📊 Redução de 68% nos cancelamentos em 2 meses",
+    userMsg: "Marcão, o João não vem à academia há 4 dias. Tive que ligar pra não perder o aluno.",
+    marcaoMsg: "Agora qualquer aluno inativo +3 dias já chega no seu dashboard. Você age antes que ele some. Nenhum aluno mais vai embora sem você saber 🔥",
   },
   {
-    name: "Carla M.",
-    sport: "Musculação • Avançada",
+    name: "Marina G. — Academia",
+    sport: "Academia com 120 alunos • BH",
     avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-    result: "💜 Modo Recuperação no ciclo — nenhuma pressão",
-    userMsg: "Marcão, tô no ciclo hoje. Não consigo treinar pesado...",
-    marcaoMsg: "Entendido. Modo Recuperação ativado 💜 Sem cobrança hoje. Protocolo: descanso + dieta anti-inflamatória. Retomamos quando estiver bem.",
+    result: "💤 Alerta de sono ruim detectado — treino ajustado antes da lesão",
+    userMsg: "Marcão, vi no dashboard que a Ana dormiu 3.8h. O que faço?",
+    marcaoMsg: "Alerta emitido! A Ana recebeu orientação de recuperação. Aconselho reduzir o volume hoje. Intervenha antes da lesão ✔️",
   },
   {
-    name: "Felipe A.",
-    sport: "CrossFit • Atleta",
+    name: "Carlos F. — Personal",
+    sport: "Especialista em corrida • RJ",
     avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-    result: "🏆 287 WODs em 1 mês — melhor performance em 2 anos",
-    userMsg: "Bati 287 WODs. Parecia impossível esse desafio de 300.",
-    marcaoMsg: "287 de 300. 95,6% de execução. Você superou seu histórico de 2 anos. Isso não é acaso — é trabalho. PARABÉNS. 💪",
+    result: "🏆 Ranking semanal aumentou 40% o engajamento dos alunos",
+    userMsg: "Meus alunos adoram o ranking semanal. Competem entre si por passos e treinos!",
+    marcaoMsg: "Semana encerrada! Top 3: Ana 18.400 passos, Bruno 17.200, Carla 15.900. Seus alunos estão batendo recordes pessoais 🔥",
   },
   {
-    name: "Juliana T.",
-    sport: "Yoga • Iniciante",
+    name: "Juliana T. — Personal",
+    sport: "Especialista em musculação • POA",
     avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-    result: "📸 Melhora de postura visível em 15 dias de análise",
-    userMsg: "Mandando minha foto de frente e costas conforme combinado.",
-    marcaoMsg: "Comparando com 15 dias atrás: postura lombar +40%. Abdômen com definição inicial. Continue. Próxima análise em 15 dias. 🎯",
+    result: "📸 Análise de postura automática de todos os alunos",
+    userMsg: "Marcão me avisou que a Fernanda melhorou 35% na postura em 30 dias.",
+    marcaoMsg: "Comparando fotos de frente: postura lombar +35%. Abdômen com definição inicial. Seu método funciona! Continua 🎯",
   },
   {
-    name: "Marcos L.",
-    sport: "Ciclismo • Avançado",
+    name: "Marcos S. — Academia",
+    sport: "Academia Boutique • Curitiba",
     avatar: "https://randomuser.me/api/portraits/men/62.jpg",
-    result: "🚴 De 150km/mês para 380km em apenas 3 meses",
-    userMsg: "Nem nos dias de chuva eu deixei de pedalar. Tinha vergonha do Marcão.",
-    marcaoMsg: "Isso que é comprometimento. 380km esse mês — recorde pessoal dos últimos 12 meses. Próximo mês: 400km. Aceita? 🔥",
+    result: "🚀 De 85 para 120 alunos em 3 meses com retenção alta",
+    userMsg: "Antes eu perdia aluno todo mês sem saber por quê. Agora vejo tudo no dashboard.",
+    marcaoMsg: "Dashboard atualizado: 114 ativos, 6 em alerta. João ficou 4 dias sem treinar — entre em contato agora! 🚨",
   },
 ];
 
 const TESTIMONIALS_ROW2 = [
   {
-    name: "Amanda R.",
-    sport: "Natação • Intermediária",
+    name: "Amélia R. — Personal",
+    sport: "Personal Trainer • Salvador",
     avatar: "https://randomuser.me/api/portraits/women/90.jpg",
-    result: "🏊 Primeiro campeonato — encontrado pelo Marcão",
-    userMsg: "Marcão, você me mandou um evento de natação aqui na minha cidade!",
-    marcaoMsg: "Campeonato amador, domingo às 9h, a 8km de você. Seu tempo de 1500m melhorou 18% esse mês. Vai lá! 🎽",
+    result: "⏰ Economizo 3h/dia que gastava fazendo check-ins manualmente",
+    userMsg: "Marcão, você faz check-in automático de todos os meus 25 alunos todo dia?",
+    marcaoMsg: "Sim! Todo dia às 7h cada aluno recebe o relatório personalizado. Você só é avisado quando tem alerta. Foque no treino 📊",
   },
   {
-    name: "Paulo H.",
-    sport: "Artes Marciais • Iniciante",
+    name: "Paulo H. — Academia",
+    sport: "Academia 80 alunos • Florianópolis",
     avatar: "https://randomuser.me/api/portraits/men/75.jpg",
-    result: "🤒 Recuperação de gripe em 4 dias com protocolo do Marcão",
-    userMsg: "Tô gripado hoje. Não tem como treinar.",
-    marcaoMsg: "Entendido. Treino pausado. Protocolo: gengibre + vitamina C + 9h de sono. Quando estiver bem me avisa. Cuide-se 🙏",
+    result: "🧠 IA detectou risco de lesão antes de acontecer",
+    userMsg: "Marcão avisou que o Rui estava dormindo mal e foi treinar mesmo assim. O que fazer?",
+    marcaoMsg: "Alerta emitido há 2 dias. Rui: sono < 5h, freq. card. elevada. Overtraining risk. Recomendo pausar treino pesado por 48h.",
   },
   {
-    name: "Thais V.",
-    sport: "Corrida • Sedentária → Iniciante",
+    name: "Thaissa V. — Personal",
+    sport: "Emagrecimento • Goiânia",
     avatar: "https://randomuser.me/api/portraits/women/33.jpg",
-    result: "🏃‍♀️ De 0 para 12km — começou do zero e superou a meta",
-    userMsg: "Marcão! Fiz 12km esse mês! A meta era 10km e eu era sedentária há 2 anos!",
-    marcaoMsg: "12km! Superou em 20%. Você era sedentária e bateu isso no mês 1. No mês 2: 18km. Você consegue. 🔥",
+    result: "🔥 Zero cancelamentos no último trimestre com alertas do Marcão",
+    userMsg: "Marcão! A Leticia estava 4 dias sem treinar. Liguei pra ela e ela ficou surpresa com a atenção!",
+    marcaoMsg: "Perfeito! Alunos contatados após 3 dias inativos têm 82% menos chance de cancelar. Continue usando o alerta! 💪",
   },
   {
-    name: "Bruno K.",
-    sport: "Musculação • Elite",
+    name: "Bruno K. — Personal",
+    sport: "Performance esportiva • Recife",
     avatar: "https://randomuser.me/api/portraits/men/22.jpg",
-    result: "💪 4 PRs no mesmo mês com análise de postura por foto",
-    userMsg: "Mandando foto do supino. Quero feedback de postura.",
-    marcaoMsg: "Cotovelos 3cm fora do alinhamento. Grip mais fechado. Com esse ajuste você ganha +5kg no PR. Testa amanhã. 📸",
+    result: "📸 Análise de postura semanal de 40 alunos sem esforço",
+    userMsg: "Marcão está analisando as fotos de postura e me enviando os relatórios automaticamente?",
+    marcaoMsg: "Sim! Esta semana: 8 alunos com feedback gerado. 3 com alerta técnico. Relatório completo no dashboard 📊",
   },
   {
-    name: "Leticia F.",
-    sport: "CrossFit • Intermediária",
+    name: "Leticia F. — Studio",
+    sport: "Studio de Pilates • São Paulo",
     avatar: "https://randomuser.me/api/portraits/women/12.jpg",
-    result: "🔥 Zero faltas em 30 dias — cobrada na hora certa",
-    userMsg: "Tá bom Marcão, vou treinar agora.",
-    marcaoMsg: "ISSO! O mês tá passando. Você aceitou o desafio. Agora vai — sem desculpa. Te espero com o check-in amanhã às 7h. 💪",
+    result: "💰 ROI de 8x: Marcão pagou 8 vezes o custo só em retenção",
+    userMsg: "Em 60 dias o Marcão impediu 6 cancelamentos. Só isso já pagou várias vezes o custo!",
+    marcaoMsg: "Inatividade detectada, alerta enviado, parceiro contatou, aluno reteve. Esse é o ciclo perfeito de retenção com IA! 🔥",
   },
 ];
 
@@ -164,16 +164,16 @@ export default function TestimonialsSection() {
         >
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="w-8 h-px bg-brand-cyan/50" />
-            <span className="text-xs font-mono text-brand-cyan uppercase tracking-widest">Hall da Fama</span>
+            <span className="text-xs font-mono text-brand-cyan uppercase tracking-widest">Parceiros em Ação</span>
             <div className="w-8 h-px bg-brand-cyan/50" />
           </div>
           <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight">
-            Quem já foi{" "}
-            <span className="gradient-text-lime">cobrado</span>
-            <br />e agradeceu depois.
+            Personals que{" "}
+            <span className="gradient-text-lime">escalaram</span>
+            <br />e agradecem depois.
           </h2>
           <p className="mt-4 text-text-muted text-sm font-mono">
-            💬 Conversas reais com alunos reais no WhatsApp
+            💬 Histórias reais de parceiros Marcão no WhatsApp
           </p>
         </motion.div>
       </div>

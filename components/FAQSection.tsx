@@ -6,36 +6,36 @@ import { ChevronDown } from "lucide-react";
 
 const FAQS = [
   {
-    q: "Ele monta treino em casa ou só pra academia?",
-    a: "Os dois. No onboarding você informa onde treina — academia, casa ou ao ar livre — e o Marcão calibra tudo para o seu ambiente. Sem equipamentos? Ele adapta. Com aparelhos? Ele potencializa.",
+    q: "O Marcão substitui o personal trainer?",
+    a: "Não. O Marcão é seu copiloto — ele cuida do acompanhamento entre as sessões presenciais: check-in diário, monitoramento de saúde, alertas de inatividade e motivação 24h. Você continua sendo o especialista técnico que entrega resultado.",
   },
   {
-    q: "Como a IA analisa minha foto?",
-    a: "A cada 15 dias, você manda uma foto de frente e uma de costas direto pelo WhatsApp. O Marcão usa IA de visão computacional para avaliar composição corporal, postura e comparar com fotos anteriores. O feedback é técnico e direto — sem papas na língua.",
+    q: "Como funciona o dashboard do parceiro?",
+    a: "Você recebe acesso a um painel exclusivo com visão de todos os seus alunos: sono, passos, treinos recentes, alertas de inatividade (+3 dias), alertas de sono ruim (<6h) e ranking semanal por performance. Tudo em tempo real.",
   },
   {
-    q: "O que acontece se eu me machucar ou ficar doente?",
-    a: "Ele entra em Modo Recuperação automaticamente. A cobrança pausa, ele manda dicas de descanso, hidratação e dieta anti-inflamatória. Quando você disser que está bem, ele retoma o treino no ritmo certo — sem te jogar direto no treino pesado.",
+    q: "E se meu aluno não usar o WhatsApp?",
+    a: "O Marcão opera 100% via WhatsApp — que é o app mais instalado no Brasil. Praticamente todos os seus alunos já têm. Sem instalação extra, sem cadastro em plataforma. Basta você compartilhar o link com o aluno.",
   },
   {
-    q: "Ele é um bot genérico ou realmente me conhece?",
-    a: "Ele te conhece de verdade. No onboarding de 21 passos, o Marcão coleta seu histórico, modalidade, nível, dias disponíveis e objetivos. Cada mensagem é gerada com base nesses dados reais — não é template, não é copy-paste. É coaching contextual.",
+    q: "Como o sistema detecta que um aluno está em risco de cancelar?",
+    a: "O Marcão monitora frequência de treino, resposta ao check-in diário, qualidade do sono e engajamento no chat. Qualquer aluno inativo por 3 dias ou mais dispara um alerta automático no seu dashboard para você intervir na hora certa.",
   },
   {
-    q: "Funciona para quem é sedentário e nunca treinou?",
-    a: "Esse é exatamente o melhor caso de uso. O Marcão começa com metas pequenas e alcançáveis — 10km corridos no mês, por exemplo — e vai aumentando conforme você progride. Sem julgamento, sem susto, só evolução gradual.",
+    q: "Meus alunos precisam ter smartwatch?",
+    a: "Não. O Marcão funciona 100% pelo WhatsApp, sem nenhum dispositivo extra. Se o aluno tem smartwatch Android com Google Health Connect, os dados de saúde são integrados automaticamente para análises ainda mais precisas.",
   },
   {
-    q: "Preciso ter smartwatch ou Google Fit para usar?",
-    a: "Não. O Marcão funciona 100% pelo WhatsApp, sem precisar de nenhum dispositivo extra. Se você tem smartwatch ou Google Fit, ele integra e usa os dados de sono e passos automaticamente. Mas é opcional — funciona perfeitamente sem.",
+    q: "Funciona para academia com muitos alunos?",
+    a: "Sim! Não há limite de alunos. Você paga R$ 49,90 por aluno/mês e o Marcão acompanha cada um com a mesma qualidade e personalização — do primeiro ao centésimo aluno.",
   },
   {
-    q: "O Marcão funciona no iPhone (iOS)?",
-    a: "No momento, não. O aplicativo do Marcão é exclusivo para Android para garantir a máxima precisão na integração de passos e treinos através do Google Health Connect. O desenvolvimento para iOS está no nosso radar para o futuro.",
+    q: "O Marcão funciona para alunos com iPhone (iOS)?",
+    a: "O WhatsApp sim — 100% funcional para iOS e Android. O aplicativo de monitoramento de saúde via Google Health Connect é exclusivo Android. Alunos com iPhone ainda recebem check-in diário, desafios e coaching, mas sem os dados biométricos automáticos.",
   },
   {
     q: "Posso cancelar quando quiser?",
-    a: "Sim, sem fidelidade e sem burocracia. É só mandar mensagem cancelando — sem formulário, sem prazo, sem multa. A mensalidade cobre o mês atual e pronto.",
+    a: "Sim, sem fidelidade e sem burocracia. Você pode remover alunos do plano a qualquer momento — a cobrança pro rata para no mesmo mês. Nenhum contrato de permanência mínima.",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function FAQSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight"
           >
-            Respondendo antes{" "}
+            Respondemos antes{" "}
             <br />
             <span className="gradient-text-lime">você perguntar.</span>
           </motion.h2>
@@ -137,7 +137,7 @@ export default function FAQSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-text-secondary text-lg"
           >
-            As dúvidas mais comuns — respondidas na lata.
+            As dúvidas mais comuns de personais e donos de academia — respondidas na lata.
           </motion.p>
         </div>
 
@@ -156,10 +156,10 @@ export default function FAQSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-12 text-center"
         >
-          <p className="text-text-muted text-sm mb-4">Ainda tem dúvida? Pergunta direto pro Marcão.</p>
+          <p className="text-text-muted text-sm mb-4">Ainda tem dúvida? Fala direto com a gente pelo WhatsApp.</p>
           <a
             id="faq-cta-whatsapp"
-            href="https://wa.me/5532984138133?text=Oi%20Marc%C3%A3o!%20Tenho%20uma%20d%C3%BAvida%20antes%20de%20assinar."
+            href="https://wa.me/5532984138133?text=Ol%C3%A1!%20Sou%20personal%20e%20quero%20entender%20melhor%20como%20funciona%20o%20Marc%C3%A3o%20para%20meus%20alunos."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border border-brand-lime/30 text-brand-lime font-semibold text-sm hover:bg-brand-lime/10 transition-all duration-300"

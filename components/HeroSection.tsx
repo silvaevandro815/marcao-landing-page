@@ -4,14 +4,14 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useUTM } from "@/hooks/useUTM";
 
-const WA_LINK = "https://wa.me/5532984138133?text=Oi%20Marc%C3%A3o!%20Quero%20conhecer%20o%20coaching%20com%20IA.";
+const WA_LINK = "https://wa.me/5532984138133?text=Ol%C3%A1!%20Sou%20personal%20trainer%20e%20quero%20conhecer%20o%20Marc%C3%A3o%20como%20parceiro%20para%20meus%20alunos.";
 
 /* ── Placeholder WhatsApp Chat (hero visual) ── */
 const CHAT_MESSAGES = [
-  { from: "marcao", text: "🔥 Fala, Campeão! É dia 1. Seu desafio de ABRIL chegou.", delay: 0 },
-  { from: "marcao", text: "💪 Meta personalizada: 50KM de corrida este mês. Com base no seu histórico de intermediário. Aceita?", delay: 0.4 },
-  { from: "user", text: "ACEITO 🔥", delay: 0.9 },
-  { from: "marcao", text: "✅ Registrado! Bom lembrar: são ~12km por semana. VOCÊ CONSEGUE.", delay: 1.3 },
+  { from: "marcao", text: "🚨 ALERTA | Carlos Silva — dormiu apenas 4.2h ontem. Risco de overtraining.", delay: 0 },
+  { from: "user", text: "Entendido. Vou ajustar o treino dele.", delay: 0.6 },
+  { from: "marcao", text: "📊 Ranking semanal: Ana L. lidera com 14.800 passos/dia. João está 3 dias sem treinar.", delay: 1.1 },
+  { from: "marcao", text: "💡 Recomendação: contate João hoje. Alunos inativos +3 dias têm 78% de chance de cancelamento.", delay: 1.6 },
 ];
 
 function StatBadge({ value, label, color }: { value: string; label: string; color: string }) {
@@ -101,7 +101,7 @@ export default function HeroSection() {
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-lime/30 bg-brand-lime/5">
                 <span className="w-2 h-2 rounded-full bg-brand-lime animate-pulse" />
                 <span className="text-xs font-mono font-semibold text-brand-lime uppercase tracking-widest">
-                  IA de Elite · WhatsApp
+                  Parceiro IA · Personal &amp; Academia
                 </span>
               </div>
             </motion.div>
@@ -113,13 +113,13 @@ export default function HeroSection() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="font-display font-black text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-none tracking-tight"
             >
-              <span className="text-white">O PERSONAL</span>
+              <span className="text-white">A IA QUE</span>
               <br />
-              <span className="gradient-text-lime text-glow-lime">QUE NÃO</span>
+              <span className="gradient-text-lime text-glow-lime">MONITORA</span>
               <br />
-              <span className="text-white">ACEITA</span>
+              <span className="text-white">SEUS</span>
               <br />
-              <span className="gradient-text-orange">DESCULPA.</span>
+              <span className="gradient-text-orange">ALUNOS.</span>
             </motion.h1>
 
             {/* Sub-headline */}
@@ -129,9 +129,8 @@ export default function HeroSection() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-text-secondary text-lg lg:text-xl max-w-lg leading-relaxed"
             >
-              Marcão é uma IA de coaching com agressividade tática e ciência real.
-              Desafios personalizados, análise de treino por foto e{" "}
-              <span className="text-white font-semibold">cobrança honesta</span> — direto no seu WhatsApp, 24 horas.
+              O Marcão é seu copiloto de IA. Ele monitora saúde, sono e performance de{" "}
+              <span className="text-white font-semibold">cada aluno</span> no WhatsApp 24h — e te envia alertas inteligentes no seu dashboard antes que você perca o cliente.
             </motion.p>
 
             {/* CTAs */}
@@ -142,7 +141,7 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-3"
             >
               <a
-                href={getWhatsAppCTA("Oi Marcão! Quero conhecer o coaching com IA.")}
+                href={getWhatsAppCTA("Olá! Sou personal trainer e quero conhecer o Marcão como parceiro para meus alunos.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-gradient-to-r from-brand-lime to-[#2ecc71] text-black font-extrabold text-base shadow-[0_0_20px_rgba(57,255,20,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-[0_0_40px_rgba(57,255,20,0.6)]"
@@ -150,13 +149,13 @@ export default function HeroSection() {
                 <svg className="w-5 h-5 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                 </svg>
-                Falar com o Marcão no WhatsApp
+                Quero ser Parceiro Marcão
               </a>
               <a
                 href="#como-funciona"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl border border-surface-border text-text-secondary hover:border-brand-lime/40 hover:text-white font-semibold text-base transition-all duration-300"
               >
-                Como Funciona
+                Ver Como Funciona
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -173,7 +172,7 @@ export default function HeroSection() {
               <svg className="w-3.5 h-3.5 text-brand-lime flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
-              Sem fidelidade · Cancele quando quiser · Sem mensalidade escondida
+              Sem contrato mínimo · Teste com seus alunos · Suporte dedicado ao parceiro
             </motion.p>
 
             {/* Social Proof Mini */}
@@ -197,8 +196,8 @@ export default function HeroSection() {
                 ))}
               </div>
               <div>
-                <div className="text-sm font-semibold text-white">+247 alunos ativos</div>
-                <div className="text-xs text-text-secondary">sendo cobrados agora mesmo 🔥</div>
+                <div className="text-sm font-semibold text-white">+247 alunos monitorados</div>
+                <div className="text-xs text-text-secondary">via parceiros ativos agora 🔥</div>
               </div>
             </motion.div>
           </div>
@@ -307,10 +306,10 @@ export default function HeroSection() {
           transition={{ delay: 1.0, duration: 0.6 }}
           className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-surface-border pt-10"
         >
-          <StatBadge value="100%" label="Exclusivo Android" color="text-brand-lime" />
-          <StatBadge value="35+" label="Modalidades & Níveis Calibrados" color="text-brand-orange" />
-          <StatBadge value="100%" label="Personalizado ao seu histórico" color="text-brand-cyan" />
-          <StatBadge value="Zero" label="Desculpas aceitas" color="text-white" />
+          <StatBadge value="24/7" label="Monitoramento de Saúde do Aluno" color="text-brand-lime" />
+          <StatBadge value="100%" label="Personalizado por aluno" color="text-brand-orange" />
+          <StatBadge value="+247" label="Alunos monitorados ativamente" color="text-brand-cyan" />
+          <StatBadge value="0" label="Alunos perdidos sem aviso" color="text-white" />
         </motion.div>
       </motion.div>
 
